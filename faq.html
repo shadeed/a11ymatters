@@ -1,0 +1,17 @@
+---
+layout: default
+title: FAQs
+permalink: /faq/
+---
+
+<section class="c-module" id="content">
+  <div class="o-wrapper">
+  	<h2 class="c-headline">FAQs</h2>
+	  <dl class="c-faqs">
+        {% for faq in site.data.faqs %}
+          <dt class="c-faqs__question"><span> {{ faq.question }} </span></dt>
+          <dd class="c-faqs__answer"><p>{{ faq.answer }}</p></dd>
+        {% endfor %}
+    </dl>
+  </div>
+</section>

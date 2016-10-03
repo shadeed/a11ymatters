@@ -1,0 +1,23 @@
+.o-layout {
+    @include clearfix();
+}
+
+.o-layout__item {
+    @include mq($from: medium) {
+        float: left;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: $unit-large;
+    }
+}
+
+.o-layout__item--half {
+    @include mq($from: medium) {
+        width: 50%;
+
+        &:not(:last-child) {
+            margin-bottom: $unit-middle;
+        }
+    }
+}

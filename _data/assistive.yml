@@ -1,0 +1,14 @@
+- key: Mac OS
+  value: VoiceOver
+
+- key: Windows
+  value: Narrator
+
+- key: Ubuntu
+  value: Orca
+
+- key: Android
+  value: TalkBack
+
+- key: iOS
+  value: VoiceOver

@@ -1,0 +1,11 @@
+- question: What is Web Accessibilty? 
+  answer: "In short, making a website available for everyone. Regardless of his physical abilites and disabilits."
+
+- question: What are the main disability key areas?
+  answer: "Visual, hearing, mobility and cognition."
+
+- question: Why do I need to care to 1 person out of 100?
+  answer: "We all need an accessible web, not only people with disabilites. Just imagine yourself in the shoes of this person. Would you be happy if you open a web page and can't navigate between the navigation items for example? No."
+
+- question: Would accessibility need more development time?
+  answer: "If you want to build custom components like menus for example, then you will need to write more code and as a result you will need more time. But most of the time, if you sticked to HTML semantics, you will save yourself a lot of effort and get an accessible web page for free."

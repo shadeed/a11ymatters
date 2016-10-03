@@ -1,0 +1,41 @@
+.c-page-title {
+  margin-bottom: $unit;
+
+    h1,
+    p {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @include mq($from: small) {
+        margin-bottom: 0;
+    } 
+}
+
+    .c-page-title__link {
+      display: block;
+      min-height: 60px;
+      padding-left: 75px;
+      background: url('../assets/images/logo.png') left top / 58px 58px no-repeat;
+
+      &:hover {
+        text-decoration: none;
+      } 
+
+      .svg & {
+        background: url('../assets/images/logo.svg') left top / 58px 58px no-repeat;
+      }
+    }
+
+
+
+
+
+
+
+
+
+    

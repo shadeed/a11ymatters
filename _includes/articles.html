@@ -1,0 +1,10 @@
+<ul class="o-layout">
+{% for post in site.categories.article %}
+    <li class="o-layout__item o-layout__item--half">
+    <article class="c-post">
+        <time class="c-post__date" datetime="{{ post.date}}">{{ post.date | date: "%A, %B %-d, %Y" }}</time>
+        <h3 class="c-post__title"><a class="c-post__link" href="{{ post.url }}">{{ post.title }}</a></h3>
+    </article>
+    </li>
+{% endfor %}
+</ul>

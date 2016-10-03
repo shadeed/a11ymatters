@@ -1,0 +1,33 @@
+.c-article {
+    //padding-top: $unit-large;
+    //padding-bottom: $unit-large;
+}
+
+    .c-article__header {
+        background: $color-brand-primary-light;
+        padding-top: $unit-large;
+        margin-bottom: $unit-large;
+        color: #fff;
+    }
+
+    .c-article__header--pattern {
+        color: #fff;
+
+        p {
+            color: inherit;
+        }
+    }
+
+    .c-article__title {
+        @include font-size(40px);
+        margin-top: $unit-small;
+        margin-bottom: $unit-large;
+        color: inherit;
+        text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.18);
+    }
+
+    .c-article__footer {
+        background: $color-grey-lighter;
+        padding: $unit;
+        margin-bottom: $unit-large;
+    }

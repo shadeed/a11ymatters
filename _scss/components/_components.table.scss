@@ -1,0 +1,24 @@
+.c-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid $color-grey-lighter;
+    text-align: left;
+    margin-bottom: $unit-large;
+
+    th,
+    td {
+        padding: $unit;
+    }
+}
+
+    .c-table__head {
+        @include font-size(18px);
+        border-bottom: 2px solid $color-black;
+        color: $color-black;
+    }
+
+    .c-table__row {
+        &:nth-child(odd) {
+            background: $color-grey-lighter;
+        }
+    }

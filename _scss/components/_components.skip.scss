@@ -1,0 +1,20 @@
+/**
+ * 1. To avoid line wrapping on small screens. Without it, the top value
+ * needs to be tweaked.
+ */
+
+.c-skip {
+    position: absolute;
+    left: 50%;
+    top: -2.5em;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: $color-brand-primary;
+    color: #fff;
+    padding: 0.75em;
+    white-space: nowrap; /* [1] */
+
+    &:focus {
+        top: 0;
+    }
+}

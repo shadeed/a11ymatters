@@ -1,0 +1,18 @@
+.c-header {
+    @include clearfix;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 transparentize(#000, 0.8);
+    padding-top: $unit;
+    padding-bottom: $unit;
+}
+
+    .c-header__wrapper {
+        @include mq($from: mini) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+  

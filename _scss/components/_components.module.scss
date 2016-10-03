@@ -1,0 +1,43 @@
+.c-module {
+     padding-top: $unit-large;
+     padding-bottom: $unit-large;
+}
+
+.c-module--intro {
+    background: #f5f5f5;
+    text-align: center;
+    padding-top: $unit-huge;
+    padding-bottom: $unit-huge;
+
+    @include mq($from: medium) {
+        padding-top: $unit-huge * 1.5;
+        padding-bottom: $unit-huge * 1.5;
+    }
+}
+
+.c-module--patterns {
+    border-top: 1px solid $color-black;
+}
+
+    .c-module--intro__title {
+        @include font-size(36px);
+        
+        span {
+            box-shadow: inset 0 -13px 0 0 transparentize($color-brand-primary-light, 0.80);
+        }
+    }
+
+    .c-module--intro__subtitle {
+        @include font-size(20px);
+        color: #4d4d4f;
+
+        @include mq($from: medium) {
+            @include font-size(18px);
+            display: inline-block;
+            max-width: 60%;
+        }   
+    }
+
+
+
+

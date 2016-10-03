@@ -1,0 +1,10 @@
+.c-link {
+    @include font-size(20px);
+    display: inline-block;
+    font-weight: bold;
+    color: $color-link;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

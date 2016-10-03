@@ -1,0 +1,32 @@
+.c-breadcrumbs {
+    margin-top: $unit-third;
+    margin-bottom: 0;
+    background: #004a7d;
+    padding-top: $unit-small;
+    padding-bottom: $unit-small;
+    color: #fff;
+}
+
+    .c-breadcrumbs__item {
+        display: inline-block;
+        color: inherit;
+        @include font-size(18px);
+
+        & + & {
+            margin-left: $unit-small;
+
+            &:before {
+                content: ">";
+                margin-right: $unit-small;
+            }
+        }
+
+        a {
+            color: inherit;
+
+            &:hover {
+                opacity: 0.85;
+                text-decoration: underline;
+            }
+        }     
+    }

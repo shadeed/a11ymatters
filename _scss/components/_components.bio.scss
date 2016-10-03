@@ -1,0 +1,20 @@
+.c-bio {
+    
+}
+
+    .c-bio__title {
+        @include font-size(20px);
+    }
+
+    .c-bio__avatar {
+        float: left;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        shape-outside: circle();
+        margin-right: $unit;
+    }
+
+    .c-bio__desc {
+        color: #4e4e4e;
+    }

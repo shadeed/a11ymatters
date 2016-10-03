@@ -1,0 +1,18 @@
+.c-notice {
+    background: #fff;
+    padding: $unit;
+    border-radius: $global-radius;
+    background: $color-grey-lighter;
+    border: 1px solid $color-grey-light;
+    color: $color-black;
+
+    p {
+        color: inherit;
+        margin-bottom: 0;
+    }
+
+    a {
+        color: $color-brand-primary-light;
+        text-decoration: underline;
+    }
+}

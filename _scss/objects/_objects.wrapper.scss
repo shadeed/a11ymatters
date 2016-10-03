@@ -1,0 +1,11 @@
+.o-wrapper {
+	max-width: 70em;
+	padding-left: $unit;
+	padding-right: $unit;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.o-wrapper--small {
+	max-width: 56em;
+}

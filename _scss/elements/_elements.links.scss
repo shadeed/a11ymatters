@@ -1,0 +1,21 @@
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+/**
+ * Default styles for simple hyperlinks.
+ */
+
+a {
+    text-decoration: none;
+    color: $color-brand-primary-light;
+
+    &:not(.c-skip):focus {
+      position: relative;
+      top: 1px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+}

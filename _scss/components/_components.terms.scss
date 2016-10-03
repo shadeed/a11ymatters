@@ -1,0 +1,71 @@
+.c-terms {
+    @include clearfix;
+    @include font-size(20px);
+    color: #000;
+}
+
+    .c-terms__term {
+        margin-bottom: $unit-small;
+        color: $color-brand-primary-light;
+
+        @include mq($from: small) {
+            float: left;   
+            width: 20%; 
+            text-align: right;
+            padding-top: $unit-small;
+            padding-right: $unit;
+        }
+    }
+
+    .c-terms__term,
+    .c-terms__detail {
+        @include mq($from: small) {
+            border-top: 2px solid $color-grey-light;
+        }
+    }   
+
+    .c-terms__detail {
+        line-height: 1.45;
+        margin-bottom: $unit-large;
+        border-bottom: 2px solid $color-grey-light;
+        padding-bottom: $unit;
+        
+
+        @include mq($from: small) {
+            float: left;   
+            width: 80%; 
+            padding-top: $unit-small;
+            padding-right: $unit-large;
+            padding-bottom: 0;
+            border-bottom: 0;
+            border-top-color: $color-brand-primary-light;
+        }
+
+        ul {
+            position: relative;
+            margin-top: $unit;
+            font-size: 90%;
+
+            &:before {
+                content: "Articles & Resources:";
+                display: block;
+                font-weight: bold;
+            }
+        }
+
+        li {
+            &:before {
+                content: "-";
+                margin-right: 5px;
+            }
+        }
+
+        a {
+            color: #000;
+
+            &:hover {
+                color: $color-brand-primary-light;
+                text-decoration: underline;
+            }
+        }
+    }

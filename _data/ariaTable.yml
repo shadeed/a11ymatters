@@ -1,0 +1,17 @@
+- key: header
+  value: banner
+
+- key: main
+  value: main
+
+- key: nav
+  value: navigation
+
+- key: aside
+  value: complementary
+
+- key: footer
+  value: contentinfo
+
+- key: section
+  value: region

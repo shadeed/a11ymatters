@@ -1,0 +1,117 @@
+.c-faqs {
+    @include font-size(24px, 1.4);
+}
+
+    .c-faqs__question {
+        color: $color-black;
+        border-bottom: 1px solid $color-grey-lighter;
+        margin-bottom: $unit-small;
+
+        span {
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            border-bottom: 4px solid $color-grey-light;
+            padding-bottom: $unit-small;
+        }
+    }
+
+    .c-faqs__answer {
+        margin-bottom: $unit-large;
+
+        p {
+            @include font-size(20px, 1.4);
+            max-width: 44em;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+.def {
+    @include clearfix;
+    font-size: 20px;
+    
+    dt {
+        float: left;   
+        width: 30%; 
+        //display: inline-block;
+        background-color: $color-brand-primary; 
+        background: linear-gradient(135deg, 
+                                   transparent 10%,
+                                   $color-brand-primary 10%, 
+                                   $color-brand-primary 0) 
+                                   no-repeat;
+        color: #fff;
+        padding: $unit-small $unit-large $unit-small $unit;
+        //margin-bottom: $unit-small;
+        //filter: drop-shadow(2px 2px 0 rgba(#000, 0.15));
+    }
+
+    dd {
+        float: left;
+        width: 70%;
+        display: inline-block;
+        background-color: $color-grey-lighter; 
+        background: linear-gradient(-45deg, 
+                                   transparent 3%,
+                                   $color-grey-lighter 3%, 
+                                   $color-grey-lighter 0) 
+                                   no-repeat;
+        padding: $unit;
+        line-height: 1.45;
+        margin-bottom: $unit-large;
+    }
+}
+
+.def1 {
+    dt,
+    dd {
+        background: #fff;
+        color: #000;
+        border-top: 2px solid $color-grey-light;
+        padding-top: 10px;
+    }
+
+    dd {
+        padding: 0;
+        padding-top: 10px;
+        border-top-color: $color-grey;
+        border-top-color: $color-brand-primary-light;
+
+        ul {
+            position: relative;
+            margin-top: 1em;
+            font-size: 90%;
+
+            &:before {
+                content: "Articles & Resources:";
+                display: block;
+                font-weight: bold;
+            }
+        }
+
+        li {
+            &:before {
+                content: "-";
+                margin-right: 5px;
+            }
+        }
+
+        a {
+            color: #000;
+
+            &:hover {
+                color: $color-brand-primary-light;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    dt {
+        text-align: right;
+        color: $color-brand-primary-light;
+    }
+}

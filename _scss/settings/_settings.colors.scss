@@ -1,0 +1,23 @@
+///*----------------------------------*\
+//  #COLORS
+//\*----------------------------------*/
+
+// Set up a colour palette which allows us to theme the entire project from one
+// location.
+
+// Color palette.
+$color-brand-primary:               #015289;
+$color-brand-primary-light:          lighten($color-brand-primary, 10%);
+$color-brand-secondary:              lighten($color-brand-primary, 30%);
+
+$color-black:                       #4d4d4f;
+$color-grey:                        #737373;
+$color-grey-light:                  #d8d8d8;
+$color-grey-lighter:                lighten(#d8d8d8, 10%);
+$color-grey-medium:                 #f6f6f6;
+
+
+// Reassign literal variables to meaningful ones.
+
+$color-post-title:                  $color-black;
+$color-link: 						$color-brand-primary-light;

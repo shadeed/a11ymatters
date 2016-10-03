@@ -1,0 +1,143 @@
+---
+layout: default
+---
+<main role="main" id="content">
+	<article class="c-article c-article--pattern">
+        <header class="c-article__header c-article__header--pattern">
+            <div class="o-wrapper o-wrapper--small">
+                <span>Exploring how to build an:</span>
+                <h2 class="c-article__title">Accessible {{ page.title }}</h2>
+                <p>Published on: <time class="c-article__date">{{ page.date | date: "%A, %B %-d, %Y" }}</time></p>
+            </div>
+            <ul class="c-breadcrumbs">
+                <div class="o-wrapper o-wrapper--small">
+                    <li class="c-breadcrumbs__item"><a href="/">Home</a></li>
+                    <li class="c-breadcrumbs__item"><a href="/patterns">Patterns</a></li>
+                    <li class="c-breadcrumbs__item"><strong>{{ page.title }}</strong></li>
+                </div>
+            </ul>
+        </header>
+
+        <div class="o-wrapper o-wrapper--small">
+            <div class="c-notice u-push-bottom-large">
+                <p>
+                    <strong>Last updated: </strong> {{ page.updated | date: "%A, %B %-d, %Y" }}.
+                </p>
+                <p>
+                    If you have a suggestion or an issue please <a href="#">submit</a> it on a11ymatters on Github.
+                </p>
+            </div>
+            
+            <section class="c-block">
+                <h3 class="c-block__title">Article Outline</h3>
+                <div class="c-block__content">
+                    <ul class="c-list c-list--bullet c-list--bigger c-list--outline">
+                        {% for outlineItem in page.outline %}
+                            <li class="c-list__item">
+                                <a href="#{{ outlineItem.link }}">{{ outlineItem.title }}</a>
+                                {% if outlineItem.subtitles %}
+                                    <ul>
+                                    {% for subheadings in outlineItem.subtitles %}  
+                                        <li>
+                                            <a href="#{{ subheadings.sublink }}">{{ subheadings.subtitle }}</a>
+                                        </li>
+                                    {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    <ul>
+                        {% for product in page.products %}
+                        <li>
+                            {{ product.top-level }}: {{ product.arbitrary }}
+                            {% if product.nested-products %}
+                                <ul>
+                                {% for nestedproduct in product.nested-products %}  
+                                    <li>{{ nestedproduct.nested }}: {{ nestedproduct.sub-arbitrary }}</li>
+                                {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+            <section class="c-block">
+                <h3 class="c-block__title">Summary</h3>
+                <div class="c-block__content">
+                    <p>{{ page.summary }}</p>
+                </div>
+            </section>
+
+            <section class="c-block">
+                <h3 class="c-block__title">As a user</h3>
+                <div class="c-block__content">
+                    <ul class="c-list c-list--bullet c-list--bigger">
+                        {% for story in page.stories %}
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>{{ story }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+
+            <section class="c-block c-ingredients">
+                <h3 class="c-block__title">Ingredients</h3>
+                <div class="c-block__content">
+                    <ul>
+                        {% for ingredient in page.ingredients %}
+                            <li class="c-ingredients__item">{{ ingredient }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+            <!-- End of Ingredients -->
+
+            <div class="s-article s-article--pattern">
+                {{ content }}
+            </div>
+
+            <footer class="c-article__footer">
+                <h3 class="c-article__footer__title">About the author:</h3>
+                <div class="c-bio">
+                    <img class="c-bio__avatar" src="../../assets/images/shadeed.jpg" alt="">
+                    <h4 class="c-bio__title">Ahmad Shadeed</h4>
+                    <p class="c-bio__meta">Full-Time Learner, You I & X Designer, Front-End Developer, Consultant CSS Architect. Learning Front End Dev since July 2, 2014. Nowadays, I'm focusing on writing to share more about my Front-end Learning Experience.</p>
+                </div>
+            </footer>
+        </div>
+	</article>
+
+    <div class="o-wrapper o-wrapper--small">
+        <section class="c-block c-block--more">
+            <h3 class="visually-hidden">More patterns</h3>
+            <div class="c-block--more__content">
+                {% if page.next.categories contains "pattern" %}
+                    <a class="c-block--more__link next" href="{{ page.next.url }}"> {{page.next.title}} </a>
+                {% endif %}
+                
+                {% if page.previous.categories contains "pattern" %}
+                    <a class="c-block--more__link prev" href="{{ page.previous.url }}"> {{page.previous.title}}</a>
+                {% endif %}
+            </div>
+        </section>
+
+        {% if page.comments %}
+        <h3>Share your thoughts and ideas:</h3>
+        
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//a11ymatters.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        {% endif %}
+    </div>
+</main>

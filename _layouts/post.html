@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<main role="main" id="content">
+	<article class="c-article">
+		<header class="c-article__header">
+			<div class="o-wrapper o-wrapper--small">
+				<span>Ahmad Shadeed wrote:</span>
+				<h2 class="c-article__title">{{ page.title }}</h2>
+				<time class="c-article__date">{{ page.date | date: "%A, %B %-d, %Y" }}</time>
+			</div>
+			<ul class="c-breadcrumbs">
+				<div class="o-wrapper o-wrapper--small">
+					<li class="c-breadcrumbs__item"><a href="/">Home</a></li>
+					<li class="c-breadcrumbs__item"><a href="/articles">Articles</a></li>
+					<li class="c-breadcrumbs__item"><strong>{{ page.title }}</strong></li>
+				</div>
+			</ul>
+		</header>
+
+		<div class="o-wrapper o-wrapper--small">
+			<div class="s-article">
+				{{ content }}
+			</div>
+
+			<footer class="c-article__footer">
+				<h3 class="c-article__footer__title">About the author:</h3>
+				<div class="c-bio">
+					<img class="c-bio__avatar" src="../../assets/images/shadeed.jpg" alt="">
+					<h4 class="c-bio__title">Ahmad Shadeed</h4>
+					<p class="c-bio__meta">Full-Time Learner, You I & X Designer, Front-End Developer, Consultant CSS Architect. Learning Front End Dev since July 2, 2014. Nowadays, I'm focusing on writing to share more about my Front-end Learning Experience.</p>
+				</div>
+			</footer>
+
+			<h3>Share your thoughts and ideas:</h3>
+
+			{% if page.comments %}
+			<div id="disqus_thread"></div>
+			<script>
+				(function() {  // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+					
+					s.src = '//a11ymatters.disqus.com/embed.js';
+					
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			{% endif %}
+		</div>
+	</article>
+</main>

@@ -1,0 +1,37 @@
+<footer class="c-footer" role="contentinfo">
+  <div class="o-wrapper">
+  	<div class="c-footer__item">
+  		<h3 class="c-footer__item__title">Sitemap</h4>
+  		<ul class="c-list">
+					{% for link in site.links %}
+							{% if link.title == "FAQs" %}
+							<li class="c-list__item">
+								<a href="{{ link.url }}" aria-label="frequently asked questions">{{ link.title }}</a>
+							</li>
+							{% else %}
+							<li class="c-list__item">
+								<a href="{{ link.url }}">{{ link.title }}</a>
+							</li>
+							{% endif %}
+				{% endfor %}
+			</ul>
+  	</div>
+
+  	<div class="c-footer__item">
+  		<h3 class="c-footer__item__title">Stay connected</h4>
+  		<ul class="c-list">
+  			<li class="c-list__item"><a href="https://www.facebook.com/Web-Accessibility-Matters-1126229660775915/">a11ymatters on <strong>Facebook</strong></a></li>
+  			<li class="c-list__item"><a href="https://twitter.com/weba11ymatters">a11ymatters on <strong>Twitter</strong></a></li>
+  		</ul>
+  	</div>
+
+  	<div class="c-footer__item c-footer__item--email">
+  		<h3 class="c-footer__item__title">Contact us</h4>
+  		<a href="mailto:contact@ishadeed.com">contact[at]ishadeed[dot]com</a>
+  	</div>
+
+  	<div class="c-footer__item c-footer__item--full c-footer__item--git">
+  		<p><a href="https://github.com/shadeed/a11ymatters" target="_blank">Contribute</a> on Github. <a href="https://www.ishadeed.com" target="_blank">By: Ahmad Shadeed</a></p>
+  	</div>
+  </div>
+</footer>

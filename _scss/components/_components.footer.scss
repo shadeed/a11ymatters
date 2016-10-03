@@ -1,0 +1,65 @@
+.c-footer {
+    @include clearfix();
+    background: #fff;
+    box-shadow: 0 -2px 4px 0 transparentize(#000, 0.8);
+    padding-top: $unit-large;
+    padding-bottom: $unit;
+}
+
+    .c-footer__item {
+        margin-bottom: $unit;
+
+        @include mq($from: small) {
+            width: 33.33%;
+            float: left;
+            padding-right: 2em;
+            margin-bottom: 0;
+        }
+    }
+
+    .c-footer__item--full {
+        text-align: center;
+
+        @include mq($from: medium) {
+            clear: left;
+            width: 100%;
+        }
+    }
+
+    .c-footer__item--git {
+        border-top: 1px solid $color-grey-light;
+        padding-top: $unit;
+
+        p {
+            @include font-size(14px);
+        }
+
+        a {
+            display: inline-block;
+            color: $color-black;
+            background: $color-grey-light;
+            padding: 4px 6px;
+            border-radius: 2px;
+
+            &:hover {
+                background: $color-brand-primary-light;
+                color: #fff;
+            }
+        }
+    }
+
+    .c-footer__item--email {
+        a {
+            color: $color-black;
+
+            &:hover {
+                text-decoration: underline;
+                color: $color-brand-primary-light;
+            }
+        }
+    }
+
+        .c-footer__item__title {
+            border-bottom: 2px solid $color-grey-light;
+            margin-bottom: $unit;
+        }

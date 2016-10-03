@@ -1,0 +1,5 @@
+_site
+.idea
+node_modules
+css/main.css
+dist/

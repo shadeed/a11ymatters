@@ -1,0 +1,26 @@
+<ul class="patterns">
+    {% for post in site.categories.pattern %}
+    <li class="c-pattern">
+        <a href="{{ post.permalink }}">
+            <article class="c-pattern__contain">
+                {% if page.url == "/patterns/" %}
+                <picture class="c-pattern__thumb">
+                    <source type="image/webp" srcset="../{{ post.thumbWebp }}">
+                    <img src="../{{ post.thumb }}" alt="">
+                </picture>
+                {% endif %} 
+                {% if page.url == "/" %}
+                <picture class="c-pattern__thumb">
+                    <source type="image/webp" srcset="{{ post.thumbWebp }}">
+                    <img srcset="{{ post.thumb }}" alt="">
+                </picture>
+                {% endif %}
+                <div class="c-pattern__meta">
+                    <h3 class="c-pattern__name"> {{ post.title }} </h3>
+                    <p class="c-pattern__desc">{{ post.summary }}</p>
+                </div>
+            </article>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

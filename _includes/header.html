@@ -1,0 +1,37 @@
+<header class="c-header" role="banner">
+  <div class="o-wrapper c-header__wrapper">
+    <div class="c-page-title">
+      <a class="c-page-title__link" href="/">
+        <h1 aria-label="Accessibility Matters">{{ site.name }}</h1>
+        <p aria-hidden="true"><em>Let's care more about web accessibilty</em></p>
+      </a>
+    </div>
+    <nav class="c-nav" role="navigation">
+      <ul>
+        {% for link in site.links %}
+             {% if link.title == "FAQs" %}
+                {% if link.id == page.url %}
+                  <li class="c-nav__item c-nav__item--active">
+                    <a href="{{ link.url }}" aria-label="frequently asked questions">{{ link.title }}</a>
+                  </li>
+                {% else %}
+                  <li class="c-nav__item">
+                    <a href="{{ link.url }}" aria-label="frequently asked questions">{{ link.title }}</a>
+                  </li>
+                {% endif %}
+             {% else %}
+                {% if link.id == page.url %}
+                <li class="c-nav__item c-nav__item--active">
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+                {% else %}
+                <li class="c-nav__item">
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+                {% endif %}
+             {% endif %}
+        {% endfor %}
+      </ul>
+   </nav>
+  </div>
+</header>

@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+<main role="main" id="content">
+	<section class="c-module c-module--intro">
+			<div class="o-wrapper">
+				<h2 class="c-module--intro__title"><span>Accessibility Matters</span></h2>
+				<p class="c-module--intro__subtitle">Documenting everything through the journey of learning web accessibility.</p>
+				<p>
+					<a class="c-link" href="/article/beginners-guide-to-web-a11y/">Read the introductory article <span aria-hidden="true">→</span></a>
+				</p>
+			</div>
+	</section>
+
+	<section class="c-module">
+		<div class="o-wrapper">
+			<h2 class="c-headline">Articles</h2>
+			{% include articles.html %}
+			<a class="c-link u-push-top" href="/articles">Read more articles <span aria-hidden="true">→</span></a>
+		</div>
+	</section>
+
+	<section class="c-module c-module--patterns">
+		<div class="o-wrapper">
+			<h2 class="c-headline">Patterns</h2>
+			{% include patterns.html %}
+			<a class="c-link u-push-top" href="#">Explore all patterns <span aria-hidden="true">→</span></a>
+		</div>
+	</section>
+</main>

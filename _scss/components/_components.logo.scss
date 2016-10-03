@@ -1,0 +1,12 @@
+.c-logo {
+	@include font-size(30px);
+    margin-bottom: $unit-tiny;
+    a {
+    	display: block;
+    	color: inherit;
+    }
+
+    @include mq($from: small) {
+        
+    }
+}

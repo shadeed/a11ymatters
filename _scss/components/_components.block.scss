@@ -1,0 +1,101 @@
+.c-block {
+    margin-bottom: $unit-large;
+    border-radius: $global-radius;
+}
+
+    .c-block__title {
+        position: relative;
+        @include font-size(18px);
+        border: 1px solid $color-grey-light;
+        border-radius: $global-radius $global-radius 0 0;
+        background: $color-grey-lighter;
+        padding: $unit-small;
+        color: $color-black;
+        margin-bottom: 0;
+
+        .flexbox & {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+
+            &:before {
+                content: "";
+                flex: 1;
+                margin-left: $unit-small;
+                border-bottom: 1px dashed transparentize($color-black, 0.5);
+            }
+        }
+    }
+
+    .c-block__content {
+        @include font-size(18px);
+        padding: $unit-small;
+        color: $color-black;
+        border: 1px solid $color-grey-light;
+        border-radius: 0 0 $global-radius $global-radius;
+        margin-top: -1px;
+
+        p {
+            font-size: 100%;
+            color: inherit;
+        }
+    }
+
+    .c-block--more__content {
+        @include mq($from: medium) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .c-block--more__link {
+        position: relative;
+        display: block;
+        padding: $unit-middle;
+        flex: 1 1 50%;
+        color: inherit;
+        font-size: $unit;
+        font-weight: bold;
+        transition: background 0.2s ease-out;
+
+        &:before {
+            content: "";
+            display: block;
+            vertical-align: middle;
+            margin-right: $unit-small;
+            margin-bottom: $unit-small;
+            font-size: 75%;
+            font-weight: lighter;
+        }
+
+        &.next {
+            &:before {
+                content: "Next pattern:";
+            }
+        }
+
+        &.prev {
+            &:before {
+                content: "Previous pattern:";
+            }
+
+            @include mq($from: medium) {
+                text-align: right;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background: $color-brand-primary-light;
+            color: #fff;
+        }
+
+        @include mq($from: medium) {
+            font-size: $unit-middle;
+            border-bottom: 4px solid $color-brand-primary-light;
+
+            &:before {
+                margin-right: 0;
+            }
+        }
+    }

@@ -1,0 +1,31 @@
+.c-post {
+    border-left: 4px solid $color-grey-light;
+    padding: $unit $unit-middle $unit;
+    padding-left: 20px;
+    transition: border 0.2s linear;
+
+    &:hover {
+        border-color: $color-brand-primary-light;
+    }
+}
+
+    .c-post__title {
+        color: $color-post-title;
+        margin-bottom: 0;
+    }
+
+    .c-post__date {
+        display: block;
+        margin-bottom: $unit-tiny;
+        color: $color-grey;
+    }
+
+    .c-post__link {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            color: $color-brand-primary-light;
+            transition: color 0.2s linear;
+        }
+    }
