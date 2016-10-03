@@ -24,3 +24,7 @@ This will give you file watching, browser synchronisation, auto-rebuild, CSS inj
 ```shell
 $ gulp
 ```
+
+## Credit
+
+[https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git](jekyll-gulp-sass-browser-sync)
