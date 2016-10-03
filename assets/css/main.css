@@ -337,28 +337,22 @@ blockquote {
       padding-right: 2em;
       margin-bottom: 0; } }
 
-.c-footer__item--full {
-  text-align: center; }
-  @media (min-width: 58em) {
-    .c-footer__item--full {
-      clear: left;
-      width: 100%; } }
+@media (min-width: 58em) {
+  .c-footer__item--full {
+    clear: left;
+    width: 100%; } }
 
-.c-footer__item--git {
-  border-top: 1px solid #d8d8d8;
-  padding-top: 16px; }
-  .c-footer__item--git p {
-    font-size: 0.875rem;
-    line-height: 1.14286; }
-  .c-footer__item--git a {
-    display: inline-block;
-    color: #4d4d4f;
-    background: #d8d8d8;
-    padding: 4px 6px;
-    border-radius: 2px; }
-    .c-footer__item--git a:hover {
-      background: #0170bc;
-      color: #fff; }
+.c-footer__item--legal {
+  border-top: 2px solid #d8d8d8;
+  padding-top: 16px;
+  text-align: center; }
+  .c-footer__item--legal p {
+    color: #4d4d4f; }
+  .c-footer__item--legal a {
+    text-decoration: underline;
+    color: inherit; }
+    .c-footer__item--legal a:hover {
+      color: #015289; }
 
 .c-footer__item--email a {
   color: #4d4d4f; }

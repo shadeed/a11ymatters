@@ -18,32 +18,27 @@
     }
 
     .c-footer__item--full {
-        text-align: center;
-
         @include mq($from: medium) {
             clear: left;
             width: 100%;
         }
     }
 
-    .c-footer__item--git {
-        border-top: 1px solid $color-grey-light;
+    .c-footer__item--legal {
+        border-top: 2px solid $color-grey-light;
         padding-top: $unit;
+        text-align: center;
 
         p {
-            @include font-size(14px);
+            color: $color-black;
         }
 
         a {
-            display: inline-block;
-            color: $color-black;
-            background: $color-grey-light;
-            padding: 4px 6px;
-            border-radius: 2px;
+            text-decoration: underline;
+            color: inherit;
 
             &:hover {
-                background: $color-brand-primary-light;
-                color: #fff;
+                color: $color-brand-primary;
             }
         }
     }
