@@ -2,6 +2,7 @@ name: a11ymatters
 markdown: kramdown
 highlighter: rouge # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+baseurl: /a11ymatters
 
 links:
  - title: Home
