@@ -320,7 +320,7 @@ blockquote {
 
 .c-footer {
   background: #fff;
-  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #d8d8d8;
   padding-top: 32px;
   padding-bottom: 16px; }
   .c-footer:after {
@@ -343,26 +343,33 @@ blockquote {
     width: 100%; } }
 
 .c-footer__item--legal {
-  border-top: 2px solid #d8d8d8;
-  padding-top: 16px;
-  text-align: center; }
+  margin-top: 16px; }
   .c-footer__item--legal p {
     color: #4d4d4f; }
   .c-footer__item--legal a {
     text-decoration: underline;
     color: inherit; }
-    .c-footer__item--legal a:hover {
+    .c-footer__item--legal a:hover, .c-footer__item--legal a:focus {
       color: #015289; }
+    .c-footer__item--legal a:focus {
+      outline: 0; }
+  @media (min-width: 58em) {
+    .c-footer__item--legal {
+      border-top: 2px solid #d8d8d8;
+      padding-top: 16px;
+      text-align: center; } }
 
 .c-footer__item--email a {
   color: #4d4d4f; }
-  .c-footer__item--email a:hover {
+  .c-footer__item--email a:hover, .c-footer__item--email a:focus {
     text-decoration: underline;
     color: #0170bc; }
+  .c-footer__item--email a:focus {
+    outline: 0; }
 
 .c-footer__item__title {
   border-bottom: 2px solid #d8d8d8;
-  margin-bottom: 16px; }
+  margin-bottom: 8px; }
 
 .c-headline {
   position: relative;
@@ -401,7 +408,7 @@ blockquote {
       padding-bottom: 96px; } }
 
 .c-module--patterns {
-  border-top: 1px solid #4d4d4f; }
+  border-top: 1px solid #d8d8d8; }
 
 .c-module--intro__title {
   font-size: 2.25rem;
@@ -607,9 +614,11 @@ blockquote {
   .c-list__item a {
     display: block;
     color: #4d4d4f; }
-    .c-list__item a:hover {
+    .c-list__item a:hover, .c-list__item a:focus {
       text-decoration: underline;
       color: #0170bc; }
+    .c-list__item a:focus {
+      outline: 0; }
   .c-list--bullet .c-list__item {
     position: relative;
     padding-left: 16px; }
@@ -627,7 +636,7 @@ blockquote {
     color: #4d4d4f;
     border-radius: 4px;
     transition: background 0.2s ease-out; }
-    .c-list--outline .c-list__item a:hover {
+    .c-list--outline .c-list__item a:hover, .c-list--outline .c-list__item a:focus {
       text-decoration: underline;
       color: #0170bc;
       background: #f2f2f2; }

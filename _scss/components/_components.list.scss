@@ -6,10 +6,6 @@
     }
 }
 
-.c-list--bullet {
-    
-}
-
 .c-list--bigger {
     @include font-size(18px);
 }
@@ -25,9 +21,14 @@
             display: block;
             color: $color-black;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 text-decoration: underline;
                 color: $color-brand-primary-light;
+            }
+
+            &:focus {
+                outline: 0;
             }
         }
 
@@ -54,7 +55,8 @@
                 border-radius: $global-radius;
                 transition: background 0.2s ease-out;
 
-                &:hover {
+                &:hover,
+                &:focus {
                     text-decoration: underline;
                     color: $color-brand-primary-light;
                     background: $color-grey-lighter;

@@ -1,7 +1,7 @@
 .c-footer {
     @include clearfix();
     background: #fff;
-    box-shadow: 0 -2px 4px 0 transparentize(#000, 0.8);
+    border-top: 1px solid $color-grey-light;
     padding-top: $unit-large;
     padding-bottom: $unit;
 }
@@ -25,9 +25,7 @@
     }
 
     .c-footer__item--legal {
-        border-top: 2px solid $color-grey-light;
-        padding-top: $unit;
-        text-align: center;
+        margin-top: $unit;
 
         p {
             color: $color-black;
@@ -37,9 +35,20 @@
             text-decoration: underline;
             color: inherit;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 color: $color-brand-primary;
             }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        @include mq($from: medium) {
+            border-top: 2px solid $color-grey-light;
+            padding-top: $unit;
+            text-align: center;
         }
     }
 
@@ -47,14 +56,19 @@
         a {
             color: $color-black;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 text-decoration: underline;
                 color: $color-brand-primary-light;
+            }
+
+            &:focus {
+                outline: 0;
             }
         }
     }
 
         .c-footer__item__title {
             border-bottom: 2px solid $color-grey-light;
-            margin-bottom: $unit;
+            margin-bottom: $unit-small;
         }
