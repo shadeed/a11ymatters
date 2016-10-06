@@ -1,6 +1,6 @@
 ---
 layout: pattern
-title:  "Search"
+title:  "Search Form"
 desc: "Different patterns on implementing an accessible search component"
 date:   2016-09-8 09:11:03
 updated: 2016-09-8 09:11:03
@@ -48,25 +48,6 @@ ingredients:
   - aria-invalid
   - alert
 ---
-
-## Article Todo
-
-- [ ] role="search"
-
-- [x] Things to avoid
-
-- [x] Building the component
-
-- [ ] Explain about how the error is added
-
-- [x] Add videos for how it should work
-
-- [ ] Find a way to show the testing results with a better design
-
-- [x] Embed the real demo
-
-- [x] Summary
-
 
 ## Things to take in consideration
 
@@ -287,6 +268,22 @@ It's not enough to add `required` attribute to the input, AT users won't get tha
 
 Let's explore how the right way to build out component.
 
+### 6- Where to add `role=search`
+
+The first thing came to my mind is that `role=search` should be added to the `<form>` element. That's wrong because the `<form>` element explicitly have `role=form`. By adding `role=search` we are changing it's default semantic.
+
+After some research, I [found](http://adrianroselli.com/2015/08/where-to-put-your-search-role.html) that a better practise is to add the role inside the `<form>` element itself, for example a wrapping `<div>`.
+
+{% highlight html linenos %}
+<form>
+  <div role="search">
+    <label class="search-label" for="search"></label>
+    <input id="search" type="text" placeholder="Search about recipes" required>
+    <input class="button" type="button" value="Search">
+  </div>
+</form>
+{% endhighlight %}
+
 ## Building the search component
 
 Now we will go through the steps on building an accessible search form. Below is the end result we want to achieve: 
@@ -383,5 +380,5 @@ So we no longer need `aria-describedby`, we have an `alert` that will do the job
 
 ## Final Demo
 
-<iframe height='364' scrolling='no' src='//codepen.io/shadeed/embed/e265a0f975047a06d1a45471813c653f/?height=364&theme-id=23655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/shadeed/pen/e265a0f975047a06d1a45471813c653f/'>a11ymatters - Search</a> by Ahmad Shadeed (<a href='http://codepen.io/shadeed'>@shadeed</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+<p data-height="344" data-theme-id="23655" data-slug-hash="6883a3dd3c483629cf18a2f8279f0a89" data-default-tab="result" data-user="shadeed" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/shadeed/pen/6883a3dd3c483629cf18a2f8279f0a89/">a11ymatters - Search with role</a> by Ahmad Shadeed (<a href="http://codepen.io/shadeed">@shadeed</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>

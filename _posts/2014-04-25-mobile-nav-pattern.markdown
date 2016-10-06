@@ -10,8 +10,25 @@ permalink: /pattern/mobile-nav/
 thumb: "assets/images/patterns/mobile-nav/thumb.jpg"
 thumbWebp: "assets/images/patterns/mobile-nav/thumb.webp"
 outline:
-   - title: What is a skip link?
-     link: what-is-a-skip-link
+   - title: Things to take in consideration
+     link: things-to-take-in-consideration
+     subtitles:
+      - subtitle: Use a semantic element for the toggle button 
+        sublink: use-a-semantic-element-for-the-toggle-button
+      - subtitle: Use a semantic element for the nav
+        sublink: use-a-semantic-element-for-the-nav
+      - subtitle: Don’t hide the nav element
+        sublink: dont-hide-the-nav-element
+      - subtitle: Progressive Enhancement
+        sublink: progressive-enhancement
+      - subtitle: The toggle design
+        sublink: the-toggle-design
+   - title: What element we should use for the toggle?
+     link: what-element-we-should-use-for-the-toggle
+   - title: Using aria attributes for the toggle element
+     link: using-aria-attributes-for-the-toggle-element
+   - title: Final Demo
+     link: final-demo
 
 summary: "How we should build a mobile navigation pattern? In this article we will go through different ideas and scenarios to build a better mobile navigation."
 stories:
@@ -26,7 +43,7 @@ ingredients:
 
 ## Things to take in consideration
 
-### 1- Use semantic elements for the toggle button
+### 1- Use a semantic element for the toggle button
 
 It's easy to use a `<span>` with a button-like styles to make it look like a real button. This is bad because with the absence of CSS or JS, it won't work.
 
