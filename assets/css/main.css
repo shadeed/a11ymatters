@@ -626,11 +626,13 @@ blockquote {
       content: "";
       position: absolute;
       left: 0;
-      top: calc(50% - 4px);
+      top: 12px;
       width: 8px;
       height: 8px;
       background: #737373;
       border-radius: 50%; }
+    .c-list--bullet .c-list__item li {
+      list-style: initial; }
   .c-list--outline .c-list__item a {
     display: block;
     color: #4d4d4f;

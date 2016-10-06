@@ -40,11 +40,15 @@
                 content: "";
                 position: absolute;
                 left: 0;
-                top: calc(50% - 4px);
+                top: 12px;
                 width: $unit-small;
                 height: $unit-small;
                 background: $color-grey;
                 border-radius: 50%;
+            }
+
+            li {
+                list-style: initial;
             }
         }
 
