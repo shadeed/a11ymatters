@@ -29,7 +29,7 @@
 
 // Generate a font-size and baseline-compatible line-height.
 @mixin font-size($font-size, $line-height: auto) {
-    font-size: ($font-size / $global-font-size) * 1rem;
+    font-size: ($font-size / $global-font-size) * 1em;
 
     @if $line-height == auto {
         line-height: ceil($font-size / $global-line-height) * ($global-line-height / $font-size);

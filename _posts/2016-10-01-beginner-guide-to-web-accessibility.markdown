@@ -129,11 +129,14 @@ Now when the user click on the label, it will focus the input element.
 
 - In links hover and active states, do not depend only on color/background changes. Instead, add more indicators that doesn't depend on the color. For example: underline, bolder text, an outline.
 
+- Use relative CSS units to make it [possible](https://css-tricks.com/building-resizeable-components-relative-css-units/) to [enlarge](https://zellwk.com/blog/media-query-units) the elements and fonts for users who prefer to zoom-in or change their default browser font size.
+
 ### Basic testing for accessibility
 
 - Through away your mouse and and start browsing a website you built. Can you use it just like when you use the mouse? Are all the links and buttons focusable? 
 
-- Use a screen reader and turn off your computer screen. Start browsing with the keyboard and see if it's easy to navigate and get what you want.
+- Use a [screen reader](https://www.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/) and turn off your computer screen. Start browsing with the keyboard and see if it's easy to navigate and get what you want.
 
+- Add `filter: grayscale()` to the root element `<html>` of your page. Try to read the content, did you find that some text is hard to read? Then probably you will need to [fix](http://webaim.org/resources/contrastchecker/) some contrast issues. 
 
 

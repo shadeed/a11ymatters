@@ -26,11 +26,13 @@
 
     .c-terms__detail {
         line-height: 1.45;
-        margin-bottom: $unit-large;
         border-bottom: 2px solid $color-grey-light;
         padding-bottom: $unit;
-        
 
+        &:not(:last-child) {
+            margin-bottom: $unit-large;
+        }
+        
         @include mq($from: small) {
             float: left;   
             width: 80%; 

@@ -69,8 +69,9 @@
     }
 
     .c-pattern__thumb {
-        transition: opacity 0.2s linear;
+        display: block;
         margin-bottom: $unit-small;
+        transition: opacity 0.2s linear;
 
         @include mq($from: medium) {
             margin-bottom: 0;
