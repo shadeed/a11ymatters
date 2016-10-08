@@ -880,6 +880,13 @@ blockquote {
 .c-table__row:nth-child(odd) {
   background: #f2f2f2; }
 
+.c-share {
+  margin-bottom: 32px; }
+  .c-share p {
+    font-size: 1.25em; }
+  .c-share a {
+    text-decoration: underline; }
+
 .s-article p {
   font-size: 1.25em;
   line-height: 1.6;

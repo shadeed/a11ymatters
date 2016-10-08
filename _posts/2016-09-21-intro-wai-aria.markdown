@@ -7,17 +7,6 @@ comments: true
 permalink: /article/intro-wai-aria/
 ---
 
-## Todo
-
-- Intro about WAI-ARIA
-
-- Explain that it can help us to link different elements in a better way (with an illustration maybe)
-
-- It's relation to the Accessibility API
-
-- Examples on the role, states and properties
-
-
 ## Introduction
 
 WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). 
