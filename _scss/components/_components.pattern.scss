@@ -10,18 +10,23 @@
         &:hover {
             text-decoration: none;
         }
-    }
 
-    &:hover {
-        color: $color-brand-primary-light;
-
-        .c-pattern__name {
-            color: $color-brand-primary-light;
-            border-color: currentColor;
+        &:focus {
+            outline: 2px dashed $color-black;
         }
 
-        .c-pattern__thumb {
-            opacity: 0.75;
+        &:hover,
+        &:focus {
+            color: $color-brand-primary-light;
+
+            .c-pattern__name {
+                color: $color-brand-primary-light;
+                border-color: currentColor;
+            }
+
+            .c-pattern__thumb {
+                opacity: 0.75;
+            }
         }
     }
 

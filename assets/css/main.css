@@ -445,11 +445,14 @@ blockquote {
   color: #737373; }
 
 .c-post__link {
+  display: block;
   color: inherit;
   text-decoration: underline; }
   .c-post__link:hover {
     color: #0170bc;
     transition: color 0.2s linear; }
+  .c-post .c-post__link:focus {
+    outline: 2px dashed #4d4d4f; }
 
 .c-pattern {
   display: block;
@@ -460,13 +463,15 @@ blockquote {
     color: inherit; }
     .c-pattern a:hover {
       text-decoration: none; }
-  .c-pattern:hover {
-    color: #0170bc; }
-    .c-pattern:hover .c-pattern__name {
-      color: #0170bc;
-      border-color: currentColor; }
-    .c-pattern:hover .c-pattern__thumb {
-      opacity: 0.75; }
+    .c-pattern a:focus {
+      outline: 2px dashed #4d4d4f; }
+    .c-pattern a:hover, .c-pattern a:focus {
+      color: #0170bc; }
+      .c-pattern a:hover .c-pattern__name, .c-pattern a:focus .c-pattern__name {
+        color: #0170bc;
+        border-color: currentColor; }
+      .c-pattern a:hover .c-pattern__thumb, .c-pattern a:focus .c-pattern__thumb {
+        opacity: 0.75; }
   .c-pattern:not(:last-child) {
     margin-bottom: 24px; }
   @media (min-width: 58em) {
@@ -582,6 +587,8 @@ blockquote {
     .c-breadcrumbs__item a:hover {
       opacity: 0.85;
       text-decoration: underline; }
+    .c-breadcrumbs__item a:focus {
+      outline: 1px dashed currentColor; }
 
 .c-bio__title {
   font-size: 1.25rem;

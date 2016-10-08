@@ -21,11 +21,18 @@
     }
 
     .c-post__link {
+        display: block;
         color: inherit;
         text-decoration: underline;
 
         &:hover {
             color: $color-brand-primary-light;
             transition: color 0.2s linear;
+        }
+
+        .c-post & {
+            &:focus {
+                outline: 2px dashed $color-black;
+            }
         }
     }

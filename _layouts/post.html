@@ -32,23 +32,25 @@ layout: default
 					<p class="c-bio__meta">Full-Time Learner, You I & X Designer, Front-End Developer, Consultant CSS Architect. Learning Front End Dev since July 2, 2014. Nowadays, I'm focusing on writing to share more about my Front-end Learning Experience.</p>
 				</div>
 			</footer>
-
-			<h3>Share your thoughts and ideas:</h3>
-
-			{% if page.comments %}
-			<div id="disqus_thread"></div>
-			<script>
-				(function() {  // DON'T EDIT BELOW THIS LINE
-					var d = document, s = d.createElement('script');
-					
-					s.src = '//a11ymatters.disqus.com/embed.js';
-					
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-				})();
-			</script>
-			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-			{% endif %}
 		</div>
 	</article>
+
+	<div class="o-wrapper o-wrapper--small">
+		<h3>Share your thoughts and ideas:</h3>
+
+		{% if page.comments %}
+		<div id="disqus_thread"></div>
+		<script>
+			(function() {  // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				
+				s.src = '//a11ymatters.disqus.com/embed.js';
+				
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+		{% endif %}
+	</div>
 </main>

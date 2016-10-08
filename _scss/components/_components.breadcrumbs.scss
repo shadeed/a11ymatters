@@ -28,5 +28,9 @@
                 opacity: 0.85;
                 text-decoration: underline;
             }
+
+            &:focus {
+                outline: 1px dashed currentColor;
+            }
         }     
     }
