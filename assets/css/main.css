@@ -524,6 +524,8 @@ blockquote {
   color: #0170bc; }
   .c-link:hover {
     text-decoration: underline; }
+  .c-link:focus {
+    outline: 2px dashed #4d4d4f; }
 
 /**
  * 1. To avoid line wrapping on small screens. Without it, the top value
