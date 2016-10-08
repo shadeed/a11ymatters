@@ -7,16 +7,6 @@ comments: true
 permalink: /article/intro-html5-sectioning-elements/
 ---
 
-## Todo
-
-- explain about aria-label
-
-- using lynx browser
-
-- add resources for each one
-
-- provide demos specially for the region
-
 ## Introduction
 
 HTML5 provide us with a lot of elements that could be used to lay out pages structure. 5 years ago, the support was not perfect and so they used [HTML5shiv](https://github.com/aFarkas/html5shiv) in order to fallback for non supporting browsers. 
