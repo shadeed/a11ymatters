@@ -494,6 +494,9 @@ blockquote {
   margin-bottom: 0;
   color: inherit;
   transition: color 0.2s linear, border 0.2s linear; }
+  .c-pattern__name:after {
+    content: ".";
+    opacity: 0; }
   @media (min-width: 58em) {
     .c-pattern__name {
       margin-bottom: 8px; } }

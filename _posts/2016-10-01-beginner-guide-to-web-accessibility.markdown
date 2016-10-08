@@ -34,7 +34,7 @@ So basically your website should work for all users and everyone should have acc
 
 - Write semantic HTML markup and use the appropriate elements depending on the content you have.
 
-- Enhance with CSS by establishing a look and feel for the website. 
+- Enhance with CSS to establish a look and feel for the website. 
 
 - Use JavaScript as an enhancement for the functionality. 
 
@@ -44,7 +44,9 @@ HTML is the core foundation of the web. When your website HTML is written in a s
 
 Refers to physical devices and computer applications that increase and improve functional capabilities for people with disabilities. Users can browser your website from many different devices: mobile phones, smart TVs, computers, laptops, tablets.. etc
 
-Most operating systems comes with a built-in screen reader application that help users to do their tasks easier. 
+Most operating systems comes with a built-in screen reader application that help users doing their tasks easily. 
+
+[Learn](https://www.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/) how to test for various screen readers on different platforms.
 
 {% include assistive-table.html 
    col1="Operating System" 
@@ -133,6 +135,5 @@ Now when the user click on the label, it will focus the input element.
 
 - Use a screen reader and turn off your computer screen. Start browsing with the keyboard and see if it's easy to navigate and get what you want.
 
-- Turn off CSS. After doing that, you will see your HTML without any styling applied to them. This will give you an idea about if you used the correct HTML elements or not.
 
 

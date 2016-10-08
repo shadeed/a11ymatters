@@ -58,6 +58,11 @@
         color: inherit;
         transition: color 0.2s linear, border 0.2s linear;
 
+        &:after {
+            content: ".";
+            opacity: 0;
+        }
+
         @include mq($from: medium) {
             margin-bottom: $unit-small;
         }
