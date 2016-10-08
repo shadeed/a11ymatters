@@ -2,8 +2,8 @@
 layout: pattern
 title:  "Page Title"
 desc: "Page Title"
-date:   2016-08-12 09:11:03
-updated: 2016-08-12 09:11:03
+date:   2016-09-02 09:11:03
+updated: 2016-09-02 09:11:03
 categories: pattern
 comments: true
 permalink: /pattern/page-title/

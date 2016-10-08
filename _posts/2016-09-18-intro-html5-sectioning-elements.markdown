@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introduction to HTML5 Elements"
-date:   2016-09-18 09:11:03
+date:   2016-09-18 08:11:03
 categories: article
 comments: true
 permalink: /article/intro-html5-sectioning-elements/
