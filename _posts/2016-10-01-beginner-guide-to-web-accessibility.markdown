@@ -7,11 +7,6 @@ comments: true
 permalink: /article/beginners-guide-to-web-a11y/
 ---
 
-### Outline
-
-- Add the article of Relative CSS Units on CSS Tricks, introduce the example.
-
-
 ### What is Web Accessibility? 
 
 > refers to the inclusive practice of removing barriers that prevent interaction with, or access to websites, by people with disabilities. **When sites are correctly designed, developed and edited, all users have equal access to information and functionality.** - Wikipedia
