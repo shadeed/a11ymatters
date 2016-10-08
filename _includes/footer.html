@@ -1,43 +1,48 @@
 <footer class="c-footer" role="contentinfo">
-  <div class="o-wrapper">
-  	<div class="c-footer__item">
-  		<h3 class="c-footer__item__title">Sitemap</h4>
-  		<ul class="c-list">
-					{% for link in site.links %}
-							{% if link.title == "FAQs" %}
-							<li class="c-list__item">
-								<a href="{{ link.url }}" aria-label="frequently asked questions">{{ link.title }}</a>
-							</li>
-							{% else %}
-							<li class="c-list__item">
-								<a href="{{ link.url }}">{{ link.title }}</a>
-							</li>
-							{% endif %}
-				{% endfor %}
-			</ul>
-  	</div>
+	<div class="o-wrapper">
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Sitemap</h4>
+				<ul class="c-list">
+					{% for link in site.links %} {% if link.title == "FAQs" %}
+					<li class="c-list__item">
+						<a href="{{ link.url }}" aria-label="frequently asked questions">{{ link.title }}</a>
+					</li>
+					{% else %}
+					<li class="c-list__item">
+						<a href="{{ link.url }}">{{ link.title }}</a>
+					</li>
+					{% endif %} {% endfor %}
+				</ul>
+		</div>
 
-  	<div class="c-footer__item">
-  		<h3 class="c-footer__item__title">Stay connected</h4>
-  		<ul class="c-list">
-  			<li class="c-list__item"><a href="https://www.facebook.com/weba11ymatters">a11ymatters on <strong>Facebook</strong></a></li>
-  			<li class="c-list__item"><a href="https://twitter.com/weba11ymatters">a11ymatters on <strong>Twitter</strong></a></li>
-  		</ul>
-  	</div>
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Stay connected</h4>
+				<ul class="c-list">
+					<li class="c-list__item"><a href="https://www.facebook.com/weba11ymatters">a11ymatters on <strong>Facebook</strong></a></li>
+					<li class="c-list__item"><a href="https://twitter.com/weba11ymatters">a11ymatters on <strong>Twitter</strong></a></li>
+				</ul>
+		</div>
 
-  	<div class="c-footer__item c-footer__item--email">
-  		<h3 class="c-footer__item__title">Contact us</h4>
-  		<a href="mailto:contact@ishadeed.com">contact[at]ishadeed[dot]com</a>
-  	</div>
+		<div class="c-footer__item c-footer__item--email">
+			<h3 class="c-footer__item__title">Contact us</h4>
+				<a href="mailto:contact@ishadeed.com">contact[at]ishadeed[dot]com</a>
+		</div>
 
-  	<div class="c-footer__item c-footer__item--full c-footer__item--legal">
-  		<p>
-			  Do you have something to add or suggest? <a href="https://github.com/shadeed/a11ymatters/issues" target="_blank">Contribute</a> on Github. 
-		</p>
-		<p>
-			An open source project by<a href="https://www.ishadeed.com" target="_blank"> Ahmad Shadeed</a>.
-			
-		</p>
-  	</div>
-  </div>
+		<div class="c-footer__item c-footer__item--full c-footer__item--legal c-footer__item--divided">
+			<div>
+				<p>
+					Do you have something to add or suggest? <a href="https://github.com/shadeed/a11ymatters/issues" target="_blank">Contribute</a>					on Github.
+				</p>
+				<p>
+					An open source project by<a href="https://www.ishadeed.com" target="_blank"> Ahmad Shadeed</a>.
+
+				</p>
+			</div>
+
+			<div class="c-footer__item c-footer__item--full">
+				<p><strong>Disclaimer:</strong> I'm not an accessibility expert. Currently, I read a lot about it and try to learn as much as I can. As a result,
+					you might find some wrong or unclear things in the articles. Please don't hesitate to ping me via Twitter on <a href="https://twitter.com/shadeed9">@shadeed</a> or <a href="https://twitter.com/weba11ymatters">@weba11ymatters</a>.</p>
+			</div>
+		</div>
+	</div>
 </footer>

@@ -337,7 +337,7 @@ blockquote {
       padding-right: 2em;
       margin-bottom: 0; } }
 
-@media (min-width: 58em) {
+@media (min-width: 48em) {
   .c-footer__item--full {
     clear: left;
     width: 100%; } }
@@ -356,8 +356,19 @@ blockquote {
   @media (min-width: 58em) {
     .c-footer__item--legal {
       border-top: 2px solid #d8d8d8;
-      padding-top: 16px;
-      text-align: center; } }
+      padding-top: 16px; } }
+
+@media (min-width: 58em) {
+  .c-footer__item--divided {
+    display: -ms-flexbox;
+    display: flex; }
+    .c-footer__item--divided > * {
+      -ms-flex: 1;
+          flex: 1; }
+    .c-footer__item--divided > :last-child {
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+      padding-left: 1em; } }
 
 .c-footer__item--email a {
   color: #4d4d4f; }

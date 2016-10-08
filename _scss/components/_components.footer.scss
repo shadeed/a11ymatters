@@ -18,7 +18,7 @@
     }
 
     .c-footer__item--full {
-        @include mq($from: medium) {
+        @include mq($from: small) {
             clear: left;
             width: 100%;
         }
@@ -48,7 +48,21 @@
         @include mq($from: medium) {
             border-top: 2px solid $color-grey-light;
             padding-top: $unit;
-            text-align: center;
+        }
+    }
+
+    .c-footer__item--divided {
+        @include mq($from: medium) {
+            display: flex;
+
+            > * {
+                flex: 1;
+            }
+
+            >:last-child {
+                flex-grow: 2;
+                padding-left: 1em;
+            }
         }
     }
 
