@@ -17,7 +17,7 @@ So basically your website should work for all users and everyone should have acc
 
 - **Browsing the web without a mouse.** You will need to browse a website with your keyboard until you get a new mouse. During that time, if a website is not built well, you won't be able to accomplish your tasks as usual and so this will result in a bad experience.
 
-- **Decrease the laptop brightness.** Using light colors for text will appear quickly when the screen brightness is decreased. Always, be sure that the color contrast meets the 
+- **Decrease the laptop brightness to save some battery life.** Using light colors for the text will make it very hard to read when the brightness is decreased. Use tools to [evaluate](http://webaim.org/resources/contrastchecker/) the contrast of your colors.
 
 - Trying to read small text without your glasses.
 
