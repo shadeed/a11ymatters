@@ -27,4 +27,5 @@ $ gulp
 
 ## Credit
 
-[https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git](jekyll-gulp-sass-browser-sync)
+- [jekyll-gulp-sass-browser-sync](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git)
+- [RSS Feed](https://github.com/snaptortoise/jekyll-rss-feeds)
