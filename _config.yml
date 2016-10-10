@@ -1,4 +1,6 @@
 name: a11ymatters
+description: Documenting everything through the journey of learning web accessibility.
+url: http://a11ymatters.com
 markdown: kramdown
 highlighter: rouge # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
