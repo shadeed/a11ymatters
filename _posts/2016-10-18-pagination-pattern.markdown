@@ -2,8 +2,8 @@
 layout: pattern
 title:  "Pagination"
 desc: "Pagination"
-date:   2016-10-17 05:11:03
-updated: 2016-10-17 05:11:03
+date:   2016-10-20 05:11:03
+updated: 2016-10-20 05:11:03
 categories: pattern
 comments: true
 permalink: /pattern/pagination/
