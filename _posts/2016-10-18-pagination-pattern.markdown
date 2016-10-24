@@ -13,11 +13,11 @@ outline:
    - title: Things to take in consideration
      link: things-to-take-in-consideration
      subtitles:
-      - subtitle: Wrap the pagination links in a nav element 
+      - subtitle: Wrap the pagination links in a nav element
         sublink: wrap-the-pagination-links-in-a-nav-element
-      - subtitle: Labeling the navigation links 
+      - subtitle: Labeling the navigation links
         sublink: labeling-the-navigation-links
-      - subtitle: Indicate which element is currently active 
+      - subtitle: Indicate which element is currently active
         sublink: indicate-which-element-is-currently-active
    - title: Using JavaScript to dynamically add the aria-label
      link: using-javascript-to-dynamically-add-the-aria-label
@@ -33,6 +33,7 @@ stories:
   - I need to navigation with Next and Previous links.
 ingredients:
   - aria-label
+  - aria-current
   - role=navigation
   - nav
   - links
@@ -82,7 +83,7 @@ See the below video for a test with VoiceOver:
 
 {% include youtube.html id="Y858zZzihKI" %}
 
-Imagine that your screen is not working for some reason, you need to navigate between different pages. When you hear `Link, 1` for a link with the number 1, do you think that you will get it? No! It's not clear. 
+Imagine that your screen is not working for some reason, you need to navigate between different pages. When you hear `Link, 1` for a link with the number 1, do you think that you will get it? No! It's not clear.
 
 {% highlight html %}
 <nav role="navigation" aria-label="Pagination Navigation">
@@ -106,17 +107,19 @@ To make it more dynamic, we will use JavaScript to loop through all the links an
 
 To indicate which element is active, we need to tweak the value of `aria-label` by something like `Page 3, Current page`. Also, we will use `aria-selected=true` for that.
 
+**Update**: Using `aria-selected` is wrong in our case, because it should be used only with a `role` attribute. Instead, we will use `aria-current`. Thanks to David Storey and Stefan Judis for commenting about this. ❤️
+
 {% highlight html %}
 <nav role="navigation" aria-label="Pagination Navigation">
     <ul>
         <!-- other pagination links -->
         <li>
-          <a href="/page-3" aria-label="Current Page, Page 3" aria-selected="true">3</a>
+          <a href="/page-3" aria-label="Current Page, Page 3" aria-current="true">3</a>
         </li>
         <!-- other pagination links -->
     </ul>
 </nav>
-{% endhighlight %} 
+{% endhighlight %}
 
 ## Using JavaScript to dynamically add the `aria-label`
 
@@ -127,19 +130,19 @@ for (var i = 0; i < pagItems.length; i++) {
   var counter = i + 1;
   var string = "Page " + counter;
 
-  if (pagItems[i].getAttribute('aria-selected')) {
+  if (pagItems[i].getAttribute('aria-current')) {
     string = "Page " + counter + ", Current Page";
   }
 
   pagItems[i].setAttribute('aria-label', string);
 }
-{% endhighlight %} 
+{% endhighlight %}
 
 **Line 1**: Select all the pagination links and add them to an array.
 
 **Line 2**: Loop through each item.
 
-**Line 7**: Check if the item has an attribute of `aria-selected`, if yes then we need to tweak the `aria-label` value.
+**Line 7**: Check if the item has an attribute of `aria-current`, if yes then we need to tweak the `aria-label` value.
 
 **Line 11**: Add the attribute `aria-label` with a custom name for each item.
 
