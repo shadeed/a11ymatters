@@ -384,3 +384,27 @@ We can build this as list with anchor links:
   </li>
 </ul>
 {% endhighlight %}
+
+## 12. Dropdown menus
+
+{% include figure.html
+		img="../../assets/images/articles/aljazeera/dropdowns.jpg"
+		title = ""
+%}
+
+All the dropdown menus work fine with mouse. But with keyboard, it's not possible to explore the list of links in each dropdown. A good solution is to make the `<a>` link as a button with `aria-pressed` attribute. Once clicked, it will move keyboard focus to the first link in the dropdown.
+
+{% highlight html %}
+<ul>
+  <li>
+    <a href="#" role="button" aria-pressed="false">News</a>
+    <ul id="sub-menu">
+      <li><a href="#">Tech</a></li>
+      <li><a href="#">Sport</a></li>
+      <li><a href="#">Middle East</a></li>
+    </ul>
+  </li>
+</ul>
+{% endhighlight %}
+
+That way, all users will be able to access the dropdown. Whether they are using a mouse/touch/keyboard to browse the info. I will explore the solution with more details in an upcoming article.
