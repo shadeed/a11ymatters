@@ -201,6 +201,13 @@ blockquote {
   clear: both; }
 
 @media (min-width: 58em) {
+  .o-layout {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+@media (min-width: 58em) {
   .o-layout__item {
     float: left; } }
 
@@ -439,6 +446,7 @@ blockquote {
       max-width: 60%; } }
 
 .c-post {
+  height: 100%;
   border-left: 4px solid #d8d8d8;
   padding: 16px 24px 16px;
   padding-left: 20px;

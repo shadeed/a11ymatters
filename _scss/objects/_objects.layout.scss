@@ -1,5 +1,10 @@
 .o-layout {
     @include clearfix();
+
+    @include mq($from: medium) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .o-layout__item {
