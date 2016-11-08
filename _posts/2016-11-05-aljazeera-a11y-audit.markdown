@@ -408,3 +408,7 @@ All the dropdown menus work fine with mouse. But with keyboard, it's not possibl
 {% endhighlight %}
 
 That way, all users will be able to access the dropdown. Whether they are using a mouse/touch/keyboard to browse the info. I will explore the solution with more details in an upcoming article.
+
+That's all for now. And again, the article goal is only for learning purposes. Let me know if you have any comment or suggestion!
+
+Thank you for reading.
