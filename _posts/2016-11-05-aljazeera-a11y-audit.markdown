@@ -92,7 +92,7 @@ As a fix for that, we will need a toggle button for the search form and inside t
 </div>
 {% endhighlight %}
 
-**Line 2:** `aria-expanded` will provide us with an indicator that wether the input is collapsed or expanded. It acts as a toggle button. 
+**Line 2:** `aria-expanded` will provide us with an indicator that whether the input is collapsed or expanded. It acts as a toggle button. 
 
 **Line 2:** `aria-controls` has the value of the input ID, which means that the button is controlling that input. In our case, by visibility.
 
@@ -169,7 +169,7 @@ By adding `outline: 0`, this will prevent users from navigating with keyboard. A
 
 If you don't like the default focus style (that blue focus ring), it's totally fine. You can add a custom one. Don't reset it to zero, please.
 
-For a link, we can add this custom focus style:
+Here is an example of a custom focus style:
 
 {% highlight css %}
 .nav-link:focus {
@@ -179,14 +179,14 @@ For a link, we can add this custom focus style:
 }
 {% endhighlight %}
 
-## 6. Source order VS. Visual order
+## 6. Source order Vs. Visual order
 
 {% include figure.html
 		img="../../assets/images/articles/aljazeera/header.jpg"
 		title = ""
 %}
 
-While navigating the header links, I noticed that "Live" link is the last link to be focused. The developer placed it visually at the right side. In reality, it should come after "Somalia" link (the second row of topics).
+While navigating the header links, I noticed that "Live" link is the last link to be focused. The developer placed it visually at the right side. In reality, it should come after "Somalia" link (the second row navigation links).
 
 Currently, from left to right we have:
 
@@ -221,7 +221,7 @@ If this is implemented, it will be something like this:
 		title = ""
 %}
 
-This link will appear once we `tab` with the keyboard. For such a news website with a lot of links, it's really important to be added.
+This link will appear once we `tab` with the keyboard. For such a news website with a lot of links, it's really important to be added. Read this [article](/pattern/skip-link/) for more info.
 
 ## 8. Zooming on mobile must be enabled
 
@@ -236,13 +236,15 @@ To allow zooming, `minimum-scale` and `maximum-scale` must be removed.
 
 ## 9. The absence of landmarks
 
-Landmarks helps the user get a general idea about the page elements like header, main content, footer, search.. etc. With VoiceOver, we can show the landmarks list by clicking on `CTRL + ALT + U` and then navigating with the arrow keys until we reach the landmarks. 
+Landmarks helps the user get a general idea about the page elements like header, main content, footer, search.. etc. With VoiceOver, we can show the landmarks list by pressing on `CTRL + ALT + U` and then navigating with the arrow keys until we reach the landmarks. 
 
 Currently, we have this list of landmarks:
 
 - nav
 
 - video
+
+Let's explore how to make them better.
 
 ### 9.1 Header
 
@@ -252,13 +254,13 @@ Currently, we have this list of landmarks:
 </div>
 {% endhighlight %}
 
-We should use `<header>` in that case, it's more semantic and screen readers will recognize it as a banner for the site. 
+We should use `<header>` in that case, it's more semantic and screen readers will recognize it as a banner for the website. 
 
 ### 9.2 Navigation
 
 The most important element in the page. They only added `<nav>` for the topics links, which is considered secondary navigation. The main items (News, Middle East, Documentaries..etc) should be inside a `<nav>` element.
 
-It's fine to add both primary and secondary navigation in separated `<nav>` elements. Though it's better to add `aria-label` to each of them, like the following:
+It's fine to add both primary and secondary navigation in separated `<nav>` elements. With the addition of `aria-label` to each of them, like the following:
 
 {% highlight html %}
 <nav aria-label="Primary Navigation">
@@ -352,7 +354,7 @@ Also, we will add `aria-label` with the value of "Topics", so screen reader user
 		title = ""
 %}
 
-The schedule days are built out of `<div>`s. They added some CSS to make it look like a button, for example: `cursor: pointer` will show a pointer when hovering on the `<div>`. This is inaccessible to keyboard users.
+The schedule days are built out of `<div>`s. They added some CSS to make it look like a button, for example: `cursor: pointer` will show a pointer when hovering on the `<div>`. 
 
 {% highlight html %}
 <div tabindex="0" class="day" id="Nov_08_Tuesday" 
@@ -407,7 +409,7 @@ All the dropdown menus work fine with mouse. But with keyboard, it's not possibl
 </ul>
 {% endhighlight %}
 
-That way, all users will be able to access the dropdown. Whether they are using a mouse/touch/keyboard to browse the info. I will explore the solution with more details in an upcoming article.
+That way, all users will be able to access the dropdown. Whether they are using a mouse/touch/keyboard. I will explore the solution with more details in an upcoming article.
 
 That's all for now. And again, the article goal is only for learning purposes. Let me know if you have any comment or suggestion!
 
