@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Accessibility Audit for Aljazeera English Website"
-date:   2016-11-04 09:11:03
+date:   2016-11-08 09:11:03
 categories: article
 comments: true
 permalink: /article/aljazeera-a11y-audit/
