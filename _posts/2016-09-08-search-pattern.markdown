@@ -206,14 +206,14 @@ Adding a `<p>` element with text like "Your input is not valid" in a red color, 
 }
 {% endhighlight %}
 
-**Normal person**
+**Sighted person**
 
 {% include figure.html
 		img="../../assets/images/patterns/search/search-error-normal.jpg"
 		title = ""
 %}
 
-**Blind person**
+**Visually impaired person**
 
 {% include figure.html
 		img="../../assets/images/patterns/search/search-error-blind.jpg"
