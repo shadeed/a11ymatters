@@ -30,7 +30,7 @@ stories:
   - I should be able to know that there is a pagination navigation when scanning the page with a screen reader.
   - Each navigation item should be read as "Goto Page 1".
   - I need to know which element is currently active.
-  - I need to navigation with Next and Previous links.
+  - I need to navigate with Next and Previous links.
 ingredients:
   - aria-label
   - aria-current
