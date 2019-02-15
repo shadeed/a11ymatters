@@ -306,8 +306,6 @@ Now we will go through the steps on building an accessible search form. Below is
 
 3. Search button.
 
-[Learn more about how to use ARIA and Role](#)
-
 {% include figure.html
 		img="../../assets/images/patterns/search/final-result.jpg"
 		title = "Search pattern final result"
