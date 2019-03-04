@@ -805,11 +805,11 @@ blockquote {
 .c-block--more__link {
   position: relative;
   display: block;
-  padding: 24px;
+  padding: 16px 0;
   -ms-flex: 1 1 50%;
       flex: 1 1 50%;
   color: inherit;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   transition: background 0.2s ease-out; }
   .c-block--more__link:before {
@@ -821,9 +821,9 @@ blockquote {
     font-size: 75%;
     font-weight: lighter; }
   .c-block--more__link.next:before {
-    content: "Next pattern:"; }
+    content: "Next article:"; }
   .c-block--more__link.prev:before {
-    content: "Previous pattern:"; }
+    content: "Previous article:"; }
   @media (min-width: 58em) {
     .c-block--more__link.prev {
       text-align: right; } }
@@ -832,6 +832,7 @@ blockquote {
     color: #fff; }
   @media (min-width: 58em) {
     .c-block--more__link {
+      padding: 24px;
       font-size: 24px;
       border-bottom: 4px solid #0170bc; }
       .c-block--more__link:before {

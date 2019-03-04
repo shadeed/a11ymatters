@@ -51,10 +51,10 @@
     .c-block--more__link {
         position: relative;
         display: block;
-        padding: $unit-middle;
+        padding: 16px 0;
         flex: 1 1 50%;
         color: inherit;
-        font-size: $unit;
+        font-size: 20px;
         font-weight: bold;
         transition: background 0.2s ease-out;
 
@@ -70,13 +70,13 @@
 
         &.next {
             &:before {
-                content: "Next pattern:";
+                content: "Next article:";
             }
         }
 
         &.prev {
             &:before {
-                content: "Previous pattern:";
+                content: "Previous article:";
             }
 
             @include mq($from: medium) {
@@ -91,6 +91,7 @@
         }
 
         @include mq($from: medium) {
+            padding: $unit-middle;
             font-size: $unit-middle;
             border-bottom: 4px solid $color-brand-primary-light;
 

@@ -109,13 +109,13 @@ layout: default
 
     <div class="o-wrapper o-wrapper--small">
         <section class="c-block c-block--more">
-            <h3 class="visually-hidden">More patterns</h3>
+            <h3 class="">More articles</h3>
             <div class="c-block--more__content">
-                {% if page.next.categories contains "pattern" %}
+                {% if page.next %}
                     <a class="c-block--more__link next" href="{{ page.next.url }}"> {{page.next.title}} </a>
                 {% endif %}
                 
-                {% if page.previous.categories contains "pattern" %}
+                {% if page.previous %}
                     <a class="c-block--more__link prev" href="{{ page.previous.url }}"> {{page.previous.title}}</a>
                 {% endif %}
             </div>

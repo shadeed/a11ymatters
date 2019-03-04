@@ -33,6 +33,21 @@ layout: default
 		</div>
 	</article>
 
+	<div class="o-wrapper o-wrapper--small u-push-bottom-large">
+		<section class="c-block c-block--more">
+			<h3 class="">More articles</h3>
+			<div class="c-block--more__content">
+				{% if page.next %}
+				<a class="c-block--more__link next" href="{{ page.next.url }}"> {{page.next.title}} </a>
+				{% endif %}
+
+				{% if page.previous %}
+				<a class="c-block--more__link prev" href="{{ page.previous.url }}"> {{page.previous.title}}</a>
+				{% endif %}
+			</div>
+		</section>
+	</div>
+
 	<div class="o-wrapper o-wrapper--small">
 		<h3>Share your thoughts and ideas:</h3>
 
