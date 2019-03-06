@@ -346,8 +346,6 @@ I think that this depends on the project itself. From my personal opinion, I see
 
 That way, it will be usable in all cases, even without JS, when clicking on the link it will move/scroll down to the menu location.
 
-Add examples!
-
 ## Using aria attributes for the toggle element
 
 By using `aria-expanded` attribute, the user will be able to know that the button content is expanded or collapsed. At first, we will add the attribute by default and then JavaScript will help us in changing the value.
