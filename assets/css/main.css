@@ -589,6 +589,18 @@ blockquote {
   padding: 16px;
   margin-bottom: 32px; }
 
+.hire-me {
+  background: #0170bc;
+  padding: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 10px 0 rgba(1, 112, 188, 0.35); }
+  .hire-me h3,
+  .hire-me p,
+  .hire-me a {
+    color: #fff; }
+  .hire-me p {
+    font-size: 18px; }
+
 .c-breadcrumbs {
   margin-top: 48px;
   margin-bottom: 0;

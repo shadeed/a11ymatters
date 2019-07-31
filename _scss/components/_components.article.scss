@@ -26,3 +26,20 @@
         padding: $unit;
         margin-bottom: $unit-large;
     }
+
+    .hire-me {
+        background: $color-brand-primary-light;
+        padding: $unit;
+        margin-bottom: $unit-middle;
+        box-shadow: 0 3px 10px 0 rgba($color-brand-primary-light, 0.35);
+
+        h3,
+        p,
+        a {
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
