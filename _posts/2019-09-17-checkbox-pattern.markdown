@@ -393,3 +393,11 @@ For our case, it's recommended to account for that in CSS and add the following:
     }
 }
 {% endhighlight %}
+
+## Codepen Demo
+<p class="codepen" data-height="337" data-theme-id="23655" data-default-tab="result" data-user="shadeed" data-slug-hash="dybqdGP" style="height: 337px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Accessible Checkbox Demos">
+  <span>See the Pen <a href="https://codepen.io/shadeed/pen/dybqdGP/">
+  Accessible Checkbox Demos</a> by Ahmad Shadeed (<a href="https://codepen.io/shadeed">@shadeed</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
