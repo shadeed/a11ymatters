@@ -951,7 +951,7 @@ blockquote {
 .s-article .highlight {
   margin-bottom: 32px; }
 
-.s-article [class*="language-"] {
+.s-article [class*="language-"]:not(.language-plaintext) {
   position: relative;
   display: block;
   padding: 0.75em;
@@ -959,7 +959,7 @@ blockquote {
   line-height: 1.45;
   border: 2px solid #d8d8d8;
   overflow-y: scroll; }
-  .s-article [class*="language-"]:before {
+  .s-article [class*="language-"]:not(.language-plaintext):before {
     content: attr(data-lang);
     position: absolute;
     right: 0;

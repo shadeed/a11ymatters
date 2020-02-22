@@ -51,7 +51,7 @@
 		margin-bottom: $unit-large;
 	}
 
-	[class*="language-"] {
+	[class*="language-"]:not(.language-plaintext) {
 		position: relative;
 		display: block;
 		padding: 0.75em;
