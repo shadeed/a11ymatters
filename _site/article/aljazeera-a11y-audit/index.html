@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Accessibility Matters - Accessibility Audit for Aljazeera English Website</title>
+        <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" />
+        <meta name="viewport" content="width=device-width">
+        <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Latest 10 blog posts (atom)" />
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement( "picture" );
+        </script>
+        <script src="/assets/js/picturefill.min.js" async></script>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+        <meta property="og:title" content="Accessibility Matters - Accessibility Audit for Aljazeera English Website"/>
+
+        
+        <meta property="og:url" content="https://www.a11ymatters.com/article/aljazeera-a11y-audit/">
+        
+
+        <meta property="og:description" content="Documenting everything through the journey of learning web accessibility." />
+        <meta property="og:image" content="https://www.a11ymatters.com/assets/images/thumb.jpg"/>
+        <meta property="og:site_name" content="Ahmad Shadeed, UX,UI Designer and Front-End developer."/>
+        <meta property="og:type" content="blog"/>
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@weba11ymatters" />
+        <meta name="twitter:title" content="Accessibility Matters - Accessibility Audit for Aljazeera English Website" />
+
+        
+        <meta name="twitter:url" content="https://www.a11ymatters.com/article/aljazeera-a11y-audit/" />
+        
+
+        <meta name="twitter:description" content="Documenting everything through the journey of learning web accessibility." />
+        <meta name="twitter:image" content="https://www.a11ymatters.com/assets/images/thumb.jpg" />
+
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1141521,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+    <body>
+          <a class="c-skip" href="#content">Skip to main content</a>
+          <header class="c-header" role="banner">
+  <div class="o-wrapper c-header__wrapper">
+    <div class="c-page-title">
+      <a class="c-page-title__link" href="/">
+        <h1 aria-label="Accessibility Matters">a11ymatters</h1>
+        <p aria-hidden="true"><em>Let's care more about web accessibility</em></p>
+      </a>
+    </div>
+    <nav class="c-nav" role="navigation">
+      <ul>
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/">Home</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/articles">Articles</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/patterns">Patterns</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/faq">FAQ</a>
+                </li>
+                
+             
+        
+      </ul>
+   </nav>
+  </div>
+</header>
+
+          <main role="main" id="content" class="in-article">
+	<article class="c-article">
+		<header class="c-article__header">
+			<div class="o-wrapper o-wrapper--small">
+				<span>Ahmad Shadeed wrote:</span>
+				<h2 class="c-article__title">Accessibility Audit for Aljazeera English Website</h2>
+				<time class="c-article__date">Tuesday, November 8, 2016</time>
+			</div>
+			<ul class="c-breadcrumbs">
+				<div class="o-wrapper o-wrapper--small">
+					<li class="c-breadcrumbs__item"><a href="/">Home</a></li>
+					<li class="c-breadcrumbs__item"><a href="/articles">Articles</a></li>
+					<li class="c-breadcrumbs__item"><strong>Accessibility Audit for Aljazeera English Website</strong></li>
+				</div>
+			</ul>
+		</header>
+
+		<div class="o-wrapper o-wrapper--small">
+			<div class="s-article">
+					<style>
+							#carbonads {
+							font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+							Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+							}
+				
+							#carbonads {
+							display: flex;
+							max-width: 330px;
+							margin: 0 auto 1rem;
+							background-color: hsl(0, 0%, 98%);
+							box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, .1);
+							}
+				
+							#carbonads a {
+							color: inherit;
+							text-decoration: none;
+							}
+				
+							#carbonads a:hover {
+							color: inherit;
+							}
+				
+							#carbonads span {
+							position: relative;
+							display: block;
+							overflow: hidden;
+							}
+				
+							#carbonads .carbon-wrap {
+							display: flex;
+							}
+				
+							.carbon-img {
+							display: block;
+							margin: 0;
+							line-height: 1;
+							}
+				
+							.carbon-img img {
+							display: block;
+							margin: 0 !important;
+							border: 0;
+							border-radius: 0;
+							}
+				
+							.carbon-text {
+							font-size: 13px;
+							padding: 10px;
+							line-height: 1.5;
+							text-align: left;
+							}
+				
+							.carbon-poweredby {
+							display: block;
+							padding: 8px 10px;
+							background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+							text-align: center;
+							text-transform: uppercase;
+							letter-spacing: .5px;
+							font-weight: 600;
+							font-size: 9px;
+							line-height: 1;
+							}
+						</style>
+						<div>
+							<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7J&placement=wwwa11ymatterscom" id="_carbonads_js"></script>
+						</div>
+				<p>While checking my Twitter feed, I noticed a tweet of a medium <a href="https://medium.com/@ajlabs/a-look-into-how-and-why-aljazeera-com-embarked-on-a-redesign-d50525ceb09c#.xuc54w2q7">article</a> on the redesign of <a href="http://www.aljazeera.com">Aljazeera.com</a>. As a curious designer, I read the whole article and loved the new design. But, in terms accessibility, there are a lot of missing things in the website. I will point out all issues that make browsing hard for keyboard and screen reader users.</p>
+
+<p>Kindly note that the goal of this article is to learn only, I’m not attacking Aljazeera or something. I care about accessibility and so all of the issues I will mention in the article should benefit us to build better experiences on the web.</p>
+
+<h2 id="1-html-element-needs-a-lang-attribute">1. <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> element needs a lang attribute</h2>
+
+<p>It’s important to add the <code class="highlighter-rouge">lang</code> attribute to the <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code>. By doing so, screen readers will announce the document language.</p>
+
+<h2 id="2-images-should-have-an-alt-attribute">2. Images should have an alt attribute</h2>
+
+<p>In the header, there is a link “Live” with a play icon on the left side. It works well with a mouse.</p>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/live-link.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/nov-2016/WatchNowPlayIcon_V1.png"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Live<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+<p>Alright. We have a couple of issues in the markup above:</p>
+
+<h3 id="21-the-href-value-is-empty">2.1. The <code class="highlighter-rouge">href</code> value is empty</h3>
+
+<p>This is very confusing, it looks like this should be a <code class="highlighter-rouge">&lt;button&gt;</code> instead because it toggle a dropdown menu. The link is here to add the behaviour of a button, by showing the mouse pointer.</p>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/live-link-dropdown.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<h3 id="22-the-alt-attribute-is-not-available">2.2. The alt attribute is not available</h3>
+
+<p>When the link is focused from keyboard, the image name “WatchNowPlayIcon_V1” will be read. We can leave the <code class="highlighter-rouge">alt</code> value empty because we already have the text “Live” inside the link.</p>
+
+<p>By leaving the alt empty, screen readers won’t notice that image at all.</p>
+
+<h3 id="23-the-dropdown-is-inaccessible-to-keyboard-and-screen-reader-users">2.3. The dropdown is inaccessible to keyboard and screen reader users</h3>
+
+<p>It only works if you hover in mobile. Hitting enter from the keyboard doesn’t help, because the <code class="highlighter-rouge">href</code> value is empty. It will does nothing to us. Listen to the audio below, this is what a screen reader user will hear if he focused the link.</p>
+
+<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/291743727%3Fsecret_token%3Ds-9JEt1&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+<h2 id="3-search-functionality">3. Search functionality</h2>
+
+<h3 id="31-search-button-should-be-more-descriptive">3.1. Search button should be more descriptive</h3>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/search-button.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>Currently, when focusing on the search icon with a screen reader, it doesn’t give any indicator that there is a search in there. Listen to the below audio:</p>
+
+<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/291761230%3Fsecret_token%3Ds-OiOme&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+<p>Submit button? What do I need to submit? This is confusing. Isn’t it?</p>
+
+<p>Since the button toggle the visiblity of the search form, we should wrap it inside an element along with the <code class="highlighter-rouge">&lt;form&gt;</code> element and taking in consideration all required ARIA roles and attributes.</p>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/search-markup.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>As a fix for that, we will need a toggle button for the search form and inside the <code class="highlighter-rouge">&lt;form&gt;</code> we will have the input and search button. By adding <code class="highlighter-rouge">role=search</code> to the <code class="highlighter-rouge">&lt;form&gt;</code> inner wrapper, we will ensure that this will be recognized as a search landmark for screen readers.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"search-wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"btn"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"searchForm"</span><span class="nt">&gt;</span>Open Search<span class="nt">&lt;/button&gt;</span>
+
+    <span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">"searchForm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"searchInput"</span><span class="nt">&gt;</span>Search about recipes:<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"searchInput"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Enter text.."</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>Line 2:</strong> <code class="highlighter-rouge">aria-expanded</code> will provide us with an indicator that whether the input is collapsed or expanded. It acts as a toggle button.</p>
+
+<p><strong>Line 2:</strong> <code class="highlighter-rouge">aria-controls</code> has the value of the input ID, which means that the button is controlling that input. In our case, by visibility.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">toggleButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#btn'</span><span class="p">),</span>
+    <span class="nx">searchForm</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#searchForm'</span><span class="p">),</span>
+    <span class="nx">searchInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#searchInput'</span><span class="p">);</span>
+
+<span class="nx">toggleButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="nx">toggleSearch</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">toggleSearch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+  <span class="nx">searchForm</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="s1">'aria-hidden'</span><span class="p">);</span>
+  <span class="nx">toggleButton</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'aria-expanded'</span><span class="p">,</span> <span class="s1">'true'</span><span class="p">);</span>
+  <span class="nx">searchInput</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span> <span class="cm">/* Move focus to the input */</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">checkKey</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">===</span> <span class="mi">27</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">closeSearch</span><span class="p">();</span>
+    <span class="nx">toggleButton</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span> <span class="cm">/* Move foucs back to the toggle button */</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">closeSearch</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">searchInput</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'aria-hidden'</span><span class="p">,</span> <span class="s1">'true'</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">[</span><span class="nt">aria-hidden</span><span class="o">=</span><span class="s2">'true'</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="4-links-should-have-a-descriptive-text">4. Links should have a descriptive text</h2>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/social-links.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>Notice that inside the link, there is no text. We only have a <code class="highlighter-rouge">&lt;span&gt;</code> and 2 icon-font-related classes. This is not correct. Users won’t get any useful information on focus.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-2 pull-right pre-header-socials"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.facebook.com/aljazeera"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"genericon genericon-facebook"</span><span class="nt">&gt;&lt;/span&gt;</span> 
+  <span class="nt">&lt;/a&gt;</span> 
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Listen to the below audio:</p>
+
+<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/291874007%3Fsecret_token%3Ds-yILoQ&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+<p>A link for what? so that’s the issue. Users will be confused by that and we should provide an alternative text. We have a couple of options:</p>
+
+<ul>
+  <li>
+    <p>Adding text inside the <code class="highlighter-rouge">&lt;span&gt;</code> and using <code class="highlighter-rouge">text-indent</code> in CSS to hide it.</p>
+  </li>
+  <li>
+    <p>Hide the text visually and leave it for screen readers only.</p>
+  </li>
+</ul>
+
+<h2 id="5-focus-styles-for-the-links">5. Focus styles for the links</h2>
+
+<p>Without focus styles, navigating with a keyboard won’t be possible because you won’t be able to see which element is currently focused. I noticed the following CSS:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">*</span> <span class="p">{</span>
+    <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>By adding <code class="highlighter-rouge">outline: 0</code>, this will prevent users from navigating with keyboard. Any user could run into this issue, suppose that you want to move to a specifc link while your mouse/touchpad is not working. You won’t be happy.</p>
+
+<p>If you don’t like the default focus style (that blue focus ring), it’s totally fine. You can add a custom one. Don’t reset it to zero, please.</p>
+
+<p>Here is an example of a custom focus style:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.nav-link</span><span class="nd">:focus</span> <span class="p">{</span>
+    <span class="nl">outline</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">dotted</span> <span class="no">blue</span><span class="p">;</span> <span class="c">/* Overriding the default focus style. */</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#FA9000</span><span class="p">;</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="6-source-order-vs-visual-order">6. Source order Vs. Visual order</h2>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/header.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>While navigating the header links, I noticed that “Live” link is the last link to be focused. The developer placed it visually at the right side. In reality, it should come after “Somalia” link (the second row navigation links).</p>
+
+<p>Currently, from left to right we have:</p>
+
+<ol>
+  <li>
+    <p>Main navigation links</p>
+  </li>
+  <li>
+    <p>Live and Search</p>
+  </li>
+  <li>
+    <p>Topics</p>
+  </li>
+</ol>
+
+<p>But the HTML source is different:</p>
+
+<ol>
+  <li>
+    <p>Main navigation links</p>
+  </li>
+  <li>
+    <p>Topics</p>
+  </li>
+  <li>
+    <p>Live and Search</p>
+  </li>
+</ol>
+
+<p>See the video to get what I mean:</p>
+
+<iframe src="https://player.vimeo.com/video/190592387" width="640" height="88" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p>Did you notice how the focus moved to the topics and then the Live link? A better implementation for this would be to change the source order and make it just like the visual one.</p>
+
+<h2 id="7-skip-to-content-link">7. Skip to content link</h2>
+
+<p>It’s important to provide the user with the ability to skip navigating all links. We can add a skip link before the header, it will move the user right to the primary content of the page. Read <a href="/pattern/skip-link/">this</a> article for more info.</p>
+
+<p>If this is implemented, it will be something like this:</p>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/skip-link.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>This link will appear once we <code class="highlighter-rouge">tab</code> with the keyboard. For such a news website with a lot of links, it’s really important to be added. Read this <a href="/pattern/skip-link/">article</a> for more info.</p>
+
+<h2 id="8-zooming-on-mobile-must-be-enabled">8. Zooming on mobile must be enabled</h2>
+
+<p>As a user, I need the ability to zoom-in or zoom-out a web page in my mobile touch screen. Whatever the reason is, the user should be able to zoom.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, 
+initial-scale=1.0, minimum-scale=1.0 maximum-scale=1.0, minimal-ui"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>To allow zooming, <code class="highlighter-rouge">minimum-scale</code> and <code class="highlighter-rouge">maximum-scale</code> must be removed.</p>
+
+<h2 id="9-the-absence-of-landmarks">9. The absence of landmarks</h2>
+
+<p>Landmarks helps the user get a general idea about the page elements like header, main content, footer, search.. etc. With VoiceOver, we can show the landmarks list by pressing on <code class="highlighter-rouge">CTRL + ALT + U</code> and then navigating with the arrow keys until we reach the landmarks.</p>
+
+<p>Currently, we have this list of landmarks:</p>
+
+<ul>
+  <li>
+    <p>nav</p>
+  </li>
+  <li>
+    <p>video</p>
+  </li>
+</ul>
+
+<p>Let’s explore how to make them better.</p>
+
+<h3 id="91-header">9.1 Header</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"site-header"</span> <span class="na">class=</span><span class="s">"site-header hidden-xs"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>We should use <code class="highlighter-rouge">&lt;header&gt;</code> in that case, it’s more semantic and screen readers will recognize it as a banner for the website.</p>
+
+<h3 id="92-navigation">9.2 Navigation</h3>
+
+<p>The most important element in the page. They only added <code class="highlighter-rouge">&lt;nav&gt;</code> for the topics links, which is considered secondary navigation. The main items (News, Middle East, Documentaries..etc) should be inside a <code class="highlighter-rouge">&lt;nav&gt;</code> element.</p>
+
+<p>It’s fine to add both primary and secondary navigation in separated <code class="highlighter-rouge">&lt;nav&gt;</code> elements. With the addition of <code class="highlighter-rouge">aria-label</code> to each of them, like the following:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Primary Navigation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span> ... <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Secondary Navigation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span> ... <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<p>Screen reader users will be able to choose between the primary or secondary landmarks.</p>
+
+<h3 id="93-main-content">9.3 Main content</h3>
+
+<p>The main content is not wrapped inside a <code class="highlighter-rouge">&lt;main&gt;</code> element, we only have a bunch of <code class="highlighter-rouge">&lt;div&gt;</code>s. The current state is like the following:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"placeholder1"</span> <span class="na">type=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+  ....
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>The correct way is to make it like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;main</span> <span class="na">id=</span><span class="s">"placeholder1"</span> <span class="na">type=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+  ....
+<span class="nt">&lt;/main&gt;</span></code></pre></figure>
+
+<h3 id="94-footer">9.4 Footer</h3>
+
+<p>The same as the header, we should use <code class="highlighter-rouge">&lt;footer&gt;</code> along with <code class="highlighter-rouge">role=contentinfo</code> so screen readers could recognize it as well.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;</span>
+  ....
+<span class="nt">&lt;/footer&gt;</span></code></pre></figure>
+
+<p>After fixing the elements, the a screen reader should see the following list of landmarks:</p>
+
+<ul>
+  <li>
+    <p>Banner (header)</p>
+  </li>
+  <li>
+    <p>Navigation (Primary)</p>
+  </li>
+  <li>
+    <p>Navigation (Secondary)</p>
+  </li>
+  <li>
+    <p>Main</p>
+  </li>
+  <li>
+    <p>Content Info (footer)</p>
+  </li>
+</ul>
+
+<h2 id="10-topics-menu-markup">10. Topics menu markup</h2>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/topics-nav.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav-topics nav-wide"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"NavTopTopics"</span><span class="nt">&gt;</span>Topics:<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/topics/events/election-2016.html"</span><span class="nt">&gt;</span>US Elections 2016<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/topics/country/syria.html"</span><span class="nt">&gt;</span>Syria's Civil War<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    ....
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<p>As you see, the title “Topics:” is added as a <code class="highlighter-rouge">&lt;li&gt;</code> element, but without a link. This is not correct. We can simply add an appropriate heading (h3 for example) as a direct child of <code class="highlighter-rouge">&lt;nav&gt;</code>.</p>
+
+<p>Also, we will add <code class="highlighter-rouge">aria-label</code> with the value of “Topics”, so screen reader users will be able to get an idea of what’s inside this navigation list.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Trending Topics"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3&gt;</span>Topics<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    ...
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h2 id="11-tv-schedule">11. TV Schedule</h2>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/schedule.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>The schedule days are built out of <code class="highlighter-rouge">&lt;div&gt;</code>s. They added some CSS to make it look like a button, for example: <code class="highlighter-rouge">cursor: pointer</code> will show a pointer when hovering on the <code class="highlighter-rouge">&lt;div&gt;</code>.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"day"</span> <span class="na">id=</span><span class="s">"Nov_08_Tuesday"</span> 
+<span class="na">onclick=</span><span class="s">"SelectSchedule('Nov_08_Tuesday')"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"DayOfWeek"</span><span class="nt">&gt;</span>TUE<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"MonthDay"</span><span class="nt">&gt;</span>Nov 08<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Issues in that markup:</p>
+
+<ul>
+  <li>
+    <p>Not accessible to screen readers.</p>
+  </li>
+  <li>
+    <p>Doesn’t work with keyboard.</p>
+  </li>
+  <li>
+    <p>I can’t copy the link of a day. Because it’s a <code class="highlighter-rouge">&lt;div&gt;</code> and not a real link.</p>
+  </li>
+</ul>
+
+<p>We can build this as list with anchor links:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"tues"</span> <span class="na">class=</span><span class="s">"day"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/news/tues-4-nov/index.html"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"DayOfWeek"</span><span class="nt">&gt;</span>TUE<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"MonthDay"</span><span class="nt">&gt;</span>Nov 08<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<h2 id="12-dropdown-menus">12. Dropdown menus</h2>
+
+<figure>
+    <img src="../../assets/images/articles/aljazeera/dropdowns.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>All the dropdown menus work fine with mouse. But with keyboard, it’s not possible to explore the list of links in each dropdown. A good solution is to make the <code class="highlighter-rouge">&lt;a&gt;</code> link as a button with <code class="highlighter-rouge">aria-pressed</code> attribute. Once clicked, it will move keyboard focus to the first link in the dropdown.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"sub-menu"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Tech<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Sport<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Middle East<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<p>That way, all users will be able to access the dropdown. Whether they are using a mouse/touch/keyboard. I will explore the solution with more details in an upcoming article.</p>
+
+<p>That’s all for now. And again, the article goal is only for learning purposes. Let me know if you have any comment or suggestion!</p>
+
+<p>Thank you for reading.</p>
+
+			</div>
+
+			<section class="c-share">
+    <h3>Share the article:</h3>
+    <p>
+        Did you like the article? <a href="https://twitter.com/intent/tweet?text=Accessibility Matters - Accessibility Audit for Aljazeera English Website&url=http://www.a11ymatters.com/article/aljazeera-a11y-audit/&via=weba11ymatters&related=shadeed9"
+            rel="nofollow" target="_blank" title="Share on Twitter">Share it on Twitter</a>
+    </p>
+</section>
+
+			<div class="hire-me">
+				<h3>Did you like the article? You can hire me.</h3>
+				<p>I'm a UX, UI Designer and Front End Developer. I focus on building accessible and easy to use websites and apps. Get in touch by email:
+					<a href="mailto:contact@ishadeed.com">contact@ishadeed.com</a></p>
+			</div>
+
+			<footer class="c-article__footer">
+				<h3 class="c-article__footer__title">About the author:</h3>
+				<div class="c-bio">
+    <img class="c-bio__avatar" src="../../assets/images/shadeed.jpg" alt="">
+    <h4 class="c-bio__title">Ahmad Shadeed</h4>
+    <p class="c-bio__meta">UI, UX Designer & Front-End Developer. Writing about web accessibility on <a href="https://twitter.com/shadeed9">@weba11ymatters</a> and sharing articles on my <a href="https://www.ishadeed.com">blog</a>. Interested in Modular Design, CSS Architecture
+        and Layout Design.</p>
+</div>
+			</footer>
+		</div>
+	</article>
+
+	<div class="o-wrapper o-wrapper--small u-push-bottom-large">
+		<section class="c-block c-block--more">
+			<h3 class="">More articles</h3>
+			<div class="c-block--more__content">
+				
+				<a class="c-block--more__link next" href="/pattern/checkbox/"> Checkbox </a>
+				
+
+				
+				<a class="c-block--more__link prev" href="/pattern/pagination/"> Pagination</a>
+				
+			</div>
+		</section>
+	</div>
+
+	<div class="o-wrapper o-wrapper--small">
+		<h3>Share your thoughts and ideas:</h3>
+
+		
+		<div id="disqus_thread"></div>
+		<script>
+			(function() {  // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				
+				s.src = '//a11ymatters.disqus.com/embed.js';
+				
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+		
+	</div>
+
+
+</main>
+
+
+          <footer class="c-footer" role="contentinfo">
+	<div class="o-wrapper">
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Sitemap</h4>
+				<ul class="c-list">
+					 
+					<li class="c-list__item">
+						<a href="/">Home</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/articles">Articles</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/patterns">Patterns</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/faq">FAQ</a>
+					</li>
+					 
+				</ul>
+		</div>
+
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Stay connected</h4>
+				<ul class="c-list">
+					<li class="c-list__item">
+						 <a href="/feed.xml">RSS Feed</a>
+					</li>
+					<li class="c-list__item"><a href="https://www.facebook.com/weba11ymatters">a11ymatters on <strong>Facebook</strong></a></li>
+					<li class="c-list__item"><a href="https://twitter.com/weba11ymatters">a11ymatters on <strong>Twitter</strong></a></li>
+				</ul>
+		</div>
+
+		<div class="c-footer__item c-footer__item--email">
+			<h3 class="c-footer__item__title">Contact us</h4>
+				<a href="mailto:contact@ishadeed.com">contact[at]ishadeed[dot]com</a>
+		</div>
+
+		<div class="c-footer__item c-footer__item--full c-footer__item--legal c-footer__item--divided">
+			<div>
+				<p>
+					Do you have suggestions? <a href="https://github.com/shadeed/a11ymatters/issues" target="_blank">Contribute</a> on Github.
+				</p>
+				<p>
+					A project by<a href="https://www.ishadeed.com" target="_blank"> Ahmad Shadeed</a>.
+
+				</p>
+			</div>
+
+			<div>
+				<p><strong>Disclaimer:</strong> I'm not an accessibility expert. Currently, I read a lot about it and try to learn as much as I can. As a result,
+					you might find some wrong or unclear things in the articles. Please don't hesitate to ping me via Twitter on <a href="https://twitter.com/shadeed9">@shadeed9</a> or <a href="https://twitter.com/weba11ymatters">@weba11ymatters</a>.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+          <script src="/assets/js/modernizr.js"></script>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-85352868-1', 'auto');
+            ga('send', 'pageview');
+
+          </script>
+    </body>
+</html>

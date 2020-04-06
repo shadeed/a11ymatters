@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>a11ymatters</title>
+		<description>Documenting everything through the journey of learning web accessibility.</description>		
+		<link>http://www.a11ymatters.com</link>
+		<atom:link href="http://www.a11ymatters.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Checkbox</title>
+				        
+				
+					<description>&lt;p&gt;As per MDN, a checkbox:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;input&amp;gt;&lt;/code&gt; of type checkbox are rendered by default as square boxes that are checked (ticked) when activated. They allow you to select or deselect single values in a form.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+				
+				<pubDate>Tue, 17 Sep 2019 08:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/pattern/checkbox/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/pattern/checkbox/</guid>
+			</item>
+		
+			<item>
+				<title>Accessibility Audit for Aljazeera English Website</title>
+				        
+				
+					<description>&lt;p&gt;While checking my Twitter feed, I noticed a tweet of a medium &lt;a href=&quot;https://medium.com/@ajlabs/a-look-into-how-and-why-aljazeera-com-embarked-on-a-redesign-d50525ceb09c#.xuc54w2q7&quot;&gt;article&lt;/a&gt; on the redesign of &lt;a href=&quot;http://www.aljazeera.com&quot;&gt;Aljazeera.com&lt;/a&gt;. As a curious designer, I read the whole article and loved the new design. But, in terms accessibility, there are a lot of missing things in the website. I will point out all issues that make browsing hard for keyboard and screen reader users.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 08 Nov 2016 11:11:03 +0200</pubDate>
+				<link>http://www.a11ymatters.com/article/aljazeera-a11y-audit/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/article/aljazeera-a11y-audit/</guid>
+			</item>
+		
+			<item>
+				<title>Pagination</title>
+				        
+				
+					<description>&lt;h2 id=&quot;things-to-take-in-consideration&quot;&gt;Things to take in consideration&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Thu, 20 Oct 2016 08:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/pattern/pagination/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/pattern/pagination/</guid>
+			</item>
+		
+			<item>
+				<title>Don't Use DIVs for Everything</title>
+				        
+				
+					<description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Tue, 11 Oct 2016 11:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/article/dont-use-divs-for-everything/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/article/dont-use-divs-for-everything/</guid>
+			</item>
+		
+			<item>
+				<title>What is WAI-ARIA?</title>
+				        
+				
+					<description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Wed, 21 Sep 2016 12:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/article/intro-wai-aria/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/article/intro-wai-aria/</guid>
+			</item>
+		
+			<item>
+				<title>Mobile Navigation</title>
+				        
+				
+					<description>&lt;h2 id=&quot;things-to-take-in-consideration&quot;&gt;Things to take in consideration&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Sun, 18 Sep 2016 12:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/pattern/mobile-nav/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/pattern/mobile-nav/</guid>
+			</item>
+		
+			<item>
+				<title>Introduction to HTML5 Elements</title>
+				        
+				
+					<description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Sun, 18 Sep 2016 11:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/article/intro-html5-sectioning-elements/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/article/intro-html5-sectioning-elements/</guid>
+			</item>
+		
+			<item>
+				<title>Skip Navigation Link</title>
+				        
+				
+					<description>&lt;h2 id=&quot;what-is-a-skip-link&quot;&gt;What is a skip link?&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Wed, 14 Sep 2016 12:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/pattern/skip-link/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/pattern/skip-link/</guid>
+			</item>
+		
+			<item>
+				<title>Search Form</title>
+				        
+				
+					<description>&lt;h2 id=&quot;things-to-take-in-consideration&quot;&gt;Things to take in consideration&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Thu, 08 Sep 2016 12:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/pattern/accessible-search/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/pattern/accessible-search/</guid>
+			</item>
+		
+			<item>
+				<title>Page Title</title>
+				        
+				
+					<description>&lt;h2 id=&quot;things-to-take-in-consideration&quot;&gt;Things to take in consideration&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Fri, 02 Sep 2016 12:11:03 +0300</pubDate>
+				<link>http://www.a11ymatters.com/pattern/page-title/</link>
+				<guid isPermaLink="true">http://www.a11ymatters.com/pattern/page-title/</guid>
+			</item>
+		
+	</channel>
+</rss>

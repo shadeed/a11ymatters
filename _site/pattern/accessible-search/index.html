@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Accessibility Matters - Search Form</title>
+        <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" />
+        <meta name="viewport" content="width=device-width">
+        <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Latest 10 blog posts (atom)" />
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement( "picture" );
+        </script>
+        <script src="/assets/js/picturefill.min.js" async></script>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+        <meta property="og:title" content="Accessibility Matters - Search Form"/>
+
+        
+        <meta property="og:url" content="https://www.a11ymatters.com/pattern/accessible-search/">
+        
+
+        <meta property="og:description" content="Documenting everything through the journey of learning web accessibility." />
+        <meta property="og:image" content="https://www.a11ymatters.com/assets/images/thumb.jpg"/>
+        <meta property="og:site_name" content="Ahmad Shadeed, UX,UI Designer and Front-End developer."/>
+        <meta property="og:type" content="blog"/>
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@weba11ymatters" />
+        <meta name="twitter:title" content="Accessibility Matters - Search Form" />
+
+        
+        <meta name="twitter:url" content="https://www.a11ymatters.com/pattern/accessible-search/" />
+        
+
+        <meta name="twitter:description" content="Documenting everything through the journey of learning web accessibility." />
+        <meta name="twitter:image" content="https://www.a11ymatters.com/assets/images/thumb.jpg" />
+
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1141521,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+    <body>
+          <a class="c-skip" href="#content">Skip to main content</a>
+          <header class="c-header" role="banner">
+  <div class="o-wrapper c-header__wrapper">
+    <div class="c-page-title">
+      <a class="c-page-title__link" href="/">
+        <h1 aria-label="Accessibility Matters">a11ymatters</h1>
+        <p aria-hidden="true"><em>Let's care more about web accessibility</em></p>
+      </a>
+    </div>
+    <nav class="c-nav" role="navigation">
+      <ul>
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/">Home</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/articles">Articles</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/patterns">Patterns</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/faq">FAQ</a>
+                </li>
+                
+             
+        
+      </ul>
+   </nav>
+  </div>
+</header>
+
+          <main role="main" id="content" class="in-article">
+	<article class="c-article c-article--pattern">
+        <header class="c-article__header c-article__header--pattern">
+            <div class="o-wrapper o-wrapper--small">
+                <span>Exploring how to build an:</span>
+                <h2 class="c-article__title">Accessible Search Form</h2>
+                <p>Published on: <time class="c-article__date">Thursday, September 8, 2016</time></p>
+            </div>
+            <ul class="c-breadcrumbs">
+                <div class="o-wrapper o-wrapper--small">
+                    <li class="c-breadcrumbs__item"><a href="/">Home</a></li>
+                    <li class="c-breadcrumbs__item"><a href="/patterns">Patterns</a></li>
+                    <li class="c-breadcrumbs__item"><strong>Search Form</strong></li>
+                </div>
+            </ul>
+        </header>
+
+        <div class="o-wrapper o-wrapper--small">
+                <style>
+                        #carbonads {
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+                        Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                        }
+            
+                        #carbonads {
+                        display: flex;
+                        max-width: 330px;
+                        margin: 0 auto 1rem;
+                        background-color: hsl(0, 0%, 98%);
+                        box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, .1);
+                        }
+            
+                        #carbonads a {
+                        color: inherit;
+                        text-decoration: none;
+                        }
+            
+                        #carbonads a:hover {
+                        color: inherit;
+                        }
+            
+                        #carbonads span {
+                        position: relative;
+                        display: block;
+                        overflow: hidden;
+                        }
+            
+                        #carbonads .carbon-wrap {
+                        display: flex;
+                        }
+            
+                        .carbon-img {
+                        display: block;
+                        margin: 0;
+                        line-height: 1;
+                        }
+            
+                        .carbon-img img {
+                        display: block;
+                        margin: 0 !important;
+                        border: 0;
+                        border-radius: 0;
+                        }
+            
+                        .carbon-text {
+                        font-size: 13px;
+                        padding: 10px;
+                        line-height: 1.5;
+                        text-align: left;
+                        }
+            
+                        .carbon-poweredby {
+                        display: block;
+                        padding: 8px 10px;
+                        background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+                        text-align: center;
+                        text-transform: uppercase;
+                        letter-spacing: .5px;
+                        font-weight: 600;
+                        font-size: 9px;
+                        line-height: 1;
+                        }
+                    </style>
+                    <div>
+                        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7J&placement=wwwa11ymatterscom" id="_carbonads_js"></script>
+                    </div>
+            <div class="c-notice u-push-bottom-large">
+                <p>
+                    <strong>Last updated: </strong> Thursday, September 8, 2016.
+                </p>
+                <p>
+                    If you have a suggestion or an issue please <a href="https://github.com/shadeed/a11ymatters/issues">submit</a> it on a11ymatters on Github.
+                </p>
+            </div>
+            
+            <section class="c-block">
+                <h3 class="c-block__title">Article Outline</h3>
+                <div class="c-block__content">
+                    <ul class="c-list c-list--bullet c-list--bigger c-list--outline">
+                        
+                            <li class="c-list__item">
+                                <a href="#things-to-take-in-consideration">Things to take in consideration</a>
+                                
+                                    <ul>
+                                      
+                                        <li>
+                                            <a href="#including-a-label-element">Including a label element</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#include-a-meaningful-description-in-the-label">Include a meaningful description in the label</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#handling-form-errors">Handling form errors</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#always-include-a-clear-focus-style">Always include a clear focus style</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#if-the-input-is-required-indicate-that">If the input is required, indicate that</a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="c-list__item">
+                                <a href="#building-the-search-component">Building the search component</a>
+                                
+                            </li>
+                        
+                            <li class="c-list__item">
+                                <a href="#issues-we-have">Issues we have</a>
+                                
+                                    <ul>
+                                      
+                                        <li>
+                                            <a href="#reading-the-error-message-twice">Reading the error message twice</a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="c-list__item">
+                                <a href="#final-demo">Final demo</a>
+                                
+                            </li>
+                        
+                    </ul>
+
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </section>
+            <section class="c-block">
+                <h3 class="c-block__title">Summary</h3>
+                <div class="c-block__content">
+                    <p>When building a search component, it's important to take accessibility in mind from the beginning. We will explore some bad things to avoid and then show the final pattern with testing results and videos.</p>
+                </div>
+            </section>
+
+            <section class="c-block">
+                <h3 class="c-block__title">As a user</h3>
+                <div class="c-block__content">
+                    <ul class="c-list c-list--bullet c-list--bigger">
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I should be able search by using the keyboard.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I should be informed that the field is required.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I want to know when the field status is invalid.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I should be able to search by clicking Enter key on the input.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I need to know what is the purpose of this input.</li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <section class="c-block c-ingredients">
+                <h3 class="c-block__title">Ingredients</h3>
+                <div class="c-block__content">
+                    <ul>
+                        
+                            <li class="c-ingredients__item">form</li>
+                        
+                            <li class="c-ingredients__item">label</li>
+                        
+                            <li class="c-ingredients__item">input</li>
+                        
+                            <li class="c-ingredients__item">aria-required</li>
+                        
+                            <li class="c-ingredients__item">aria-invalid</li>
+                        
+                            <li class="c-ingredients__item">alert</li>
+                        
+                    </ul>
+                </div>
+            </section>
+            <!-- End of Ingredients -->
+
+            <div class="s-article s-article--pattern">
+                <h2 id="things-to-take-in-consideration">Things to take in consideration</h2>
+
+<h3 id="1--including-a-label-element">1- Including a <code class="highlighter-rouge">&lt;label&gt;</code> element.</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>When we don’t have a <code class="highlighter-rouge">&lt;label&gt;</code> element, AT (Assistive Technology) users won’t get the meaning of this input, even if there is a <code class="highlighter-rouge">placeholder</code> attribute.</p>
+
+<p>Testing results from different screen readers:</p>
+
+<ul>
+  <li>
+    <p><strong>VoiceOver on Safari</strong>: edit text</p>
+  </li>
+  <li>
+    <p><strong>JAWS 17 on IE11</strong>: edit</p>
+  </li>
+  <li>
+    <p><strong>NVDA 2016 on Firefox Win</strong>: edit has auto complete, blank</p>
+  </li>
+  <li>
+    <p><strong>iOS VoiceOver</strong>: text field, double tab to edit</p>
+  </li>
+</ul>
+
+<p>What’s the purpose of this input? The user will have no clue that this is a search input. This is very bad and confusing. As a result, your user will be frustrated and not happy with that.</p>
+
+<p><strong>Solution</strong></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search about recipes:<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="2--include-a-meaningful-description-in-the-label">2- Include a meaningful description in the <code class="highlighter-rouge">label</code></h3>
+
+<figure>
+    <img src="../../assets/images/patterns/search/search-no-label.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>How could that happen? When you add a search icon as an <code class="highlighter-rouge">&lt;img&gt;</code>, <code class="highlighter-rouge">&lt;svg&gt;</code> or <code class="highlighter-rouge">background-image</code>, it’s important to add a text saying <em>Search</em> for example, and hide it with CSS.</p>
+
+<p>In the below example, we have a search icon as a replacement for the text <em>Search</em> inside a <code class="highlighter-rouge">&lt;label&gt;</code>.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">viewBox=</span><span class="s">"0 0 40 40"</span> <span class="nt">&gt;</span>
+        <span class="c">&lt;!-- path data --&gt;</span>
+      <span class="nt">&lt;/svg&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Let’s see what screen readers will announce.</p>
+
+<ul>
+  <li>
+    <p><strong>VoiceOver on Safari</strong>: edit text</p>
+  </li>
+  <li>
+    <p><strong>JAWS 17 on IE11</strong>: edit</p>
+  </li>
+  <li>
+    <p><strong>NVDA 2016 on Firefox Win</strong>: edit has auto complete, blank</p>
+  </li>
+  <li>
+    <p><strong>iOS VoiceOver</strong>: text field, double tab to edit</p>
+  </li>
+</ul>
+
+<p>It’s the same as not including a <code class="highlighter-rouge">&lt;label&gt;</code> element. To solve this, we can try the following:</p>
+
+<h4 id="1--add-a-title-for-the-svg-element-that-will-be-associated-with-aria-labelledby-attribute">1- Add a title for the SVG element that will be associated with <code class="highlighter-rouge">aria-labelledby</code> attribute.</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span> <span class="na">aria-labelledby=</span><span class="s">"searchTitle"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">viewBox=</span><span class="s">"0 0 451 451"</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;title</span> <span class="na">id=</span><span class="s">"searchTitle"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/title&gt;</span>
+        <span class="c">&lt;!-- path data --&gt;</span>
+      <span class="nt">&lt;/svg&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h4 id="2--add-text-search-inside-the-label-and-hide-it-with-css-text-indent">2- Add text <em>Search</em> inside the <code class="highlighter-rouge">&lt;label&gt;</code> and hide it with CSS <code class="highlighter-rouge">text-indent</code>.</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+      Search
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="nc">.search-label</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('search.png')</span><span class="p">;</span>
+  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">-9999px</span><span class="p">;</span>
+<span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h4 id="3--hide-the-text-off-screen">3- Hide the text off screen</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Search<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="nc">.search-label</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('search.png')</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.search-label</span> <span class="nt">span</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">clip</span><span class="p">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">);</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="3--handling-form-errors">3- Handling form errors</h3>
+
+<p>It’s important to validate your forms for accessibility. In case the user didn’t enter anything in the field and pressed on button, it should inform AT that this input is not valid and required.</p>
+
+<p>Adding a <code class="highlighter-rouge">&lt;p&gt;</code> element with text like “Your input is not valid” in a red color, is not enough for AT users because it won’t be accessible to them.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-error"</span><span class="nt">&gt;</span>The input is not valid. It must not be empty!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.form-error</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><strong>Sighted person</strong></p>
+
+<figure>
+    <img src="../../assets/images/patterns/search/search-error-normal.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p><strong>Visually impaired person</strong></p>
+
+<figure>
+    <img src="../../assets/images/patterns/search/search-error-blind.jpg" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>Screen readers? Simply the user will get nothing. The error message won’t be seen from the first place because its added as a regular <code class="highlighter-rouge">&lt;p&gt;</code> without taking in consideration ARIA and Role attributes.</p>
+
+<h3 id="4--always-include-a-clear-focus-style">4- Always include a clear focus style</h3>
+
+<p>When the user focuses on the input, we should indicate that in a very clear way. That could be done by:</p>
+
+<ul>
+  <li>
+    <p>Adding a thick border with a dark color.</p>
+  </li>
+  <li>
+    <p>Adding a glow or a blurred shadow.</p>
+  </li>
+  <li>
+    <p>Changing the background color a bit to be darker.</p>
+  </li>
+</ul>
+
+<p>In general, we shouldn’t depend only on the color to indicate that an input is focused. There are people with color blindness (partial or full) who won’t be able to recognize the color on focus.</p>
+
+<p>Give them other indicators that doesn’t depend on colors, like a thick border or a shadow. Whatever works for your case.</p>
+
+<p>In the below example, we will see how a red border will be seen from the view of a color blindness user.</p>
+
+<p><strong>A Person with normal color vision:</strong></p>
+
+<figure>
+    <img src="../../assets/images/patterns/search/form-normal.jpg" alt="How the border will look for normal people" draggable="false" />
+    <figcaption>How the border will look for normal people</figcaption>
+</figure>
+
+<p><strong>A Person with <a href="http://www.color-blindness.com/deuteranopia-red-green-color-blindness/">Deuteranopia</a> color blindness:</strong></p>
+
+<figure>
+    <img src="../../assets/images/patterns/search/form-color-blind.jpg" alt="How the border will look for color blindness people" draggable="false" />
+    <figcaption>How the border will look for color blindness people</figcaption>
+</figure>
+
+<p>Noticed how the border color is almost dark green? This won’t give an idea that this input is not valid. You should add other indicators like a message or an “X” icon for example.</p>
+
+<h3 id="5--if-the-input-is-required-indicate-that">5- If the input is required, indicate that</h3>
+
+<p>It’s not enough to add <code class="highlighter-rouge">required</code> attribute to the input, AT users won’t get that the input is required.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Let’s explore how the right way to build out component.</p>
+
+<h3 id="6--where-to-add-rolesearch">6- Where to add <code class="highlighter-rouge">role=search</code></h3>
+
+<p>The first thing came to my mind is that <code class="highlighter-rouge">role=search</code> should be added to the <code class="highlighter-rouge">&lt;form&gt;</code> element. That’s wrong because the <code class="highlighter-rouge">&lt;form&gt;</code> element explicitly have <code class="highlighter-rouge">role=form</code>. By adding <code class="highlighter-rouge">role=search</code> we are changing it’s default semantic.</p>
+
+<p>After some research, I <a href="http://adrianroselli.com/2015/08/where-to-put-your-search-role.html">found</a> that a better practise is to add the role inside the <code class="highlighter-rouge">&lt;form&gt;</code> element itself, for example a wrapping <code class="highlighter-rouge">&lt;div&gt;</code>.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search about recipes"</span> <span class="na">required</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="building-the-search-component">Building the search component</h2>
+
+<p>Now we will go through the steps on building an accessible search form. Below is the end result we want to achieve:</p>
+
+<p><strong>HTML</strong></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search about a recipe
+      <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"error"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"search-input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">aria-describedby=</span><span class="s">"error"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<ol>
+  <li>
+    <p>We have a <code class="highlighter-rouge">&lt;label&gt;</code> with a proper and easy to understand description. Then, inside the <code class="highlighter-rouge">&lt;label&gt;</code> we have a <code class="highlighter-rouge">&lt;p&gt;</code> element with <code class="highlighter-rouge">role=alert</code> attribute. This will help screen readers to get the error text in case the input was not valid.</p>
+  </li>
+  <li>
+    <p>Our input, with <code class="highlighter-rouge">aria-describedby="error"</code>. That’s mean when the user focuses on the input and it’s not valid, the validation error will be announced based on the element with <code class="highlighter-rouge">id=error</code>.</p>
+  </li>
+  <li>
+    <p>Search button.</p>
+  </li>
+</ol>
+
+<figure>
+    <img src="../../assets/images/patterns/search/final-result.jpg" alt="Search pattern final result" draggable="false" />
+    <figcaption>Search pattern final result</figcaption>
+</figure>
+
+<p><strong>Focus style</strong></p>
+
+<figure>
+    <img src="../../assets/images/patterns/search/search-focus.jpg" alt="Search pattern focus style" draggable="false" />
+    <figcaption>Search pattern focus style</figcaption>
+</figure>
+
+<p><strong>Form error</strong></p>
+
+<figure>
+    <img src="../../assets/images/patterns/search/search-error.jpg" alt="Search pattern form error" draggable="false" />
+    <figcaption>Search pattern form error</figcaption>
+</figure>
+
+<p>Enough visual, let’s see how screen readers will understand our simple search form!</p>
+
+<h3 id="input-focus">Input Focus</h3>
+
+<ul>
+  <li>
+    <p><strong>VoiceOver on Safari</strong>: search about a recipe, edit text</p>
+  </li>
+  <li>
+    <p><strong>JAWS 17 on IE11</strong>: search about a recipe, edit</p>
+  </li>
+  <li>
+    <p><strong>NVDA 2016 on Firefox Win</strong>: search about a recipe, edit</p>
+  </li>
+  <li>
+    <p><strong>iOS VoiceOver</strong>:</p>
+  </li>
+</ul>
+
+<h3 id="form-error-search-when-the-input-is-empty">Form Error (Search when the input is empty)</h3>
+
+<ul>
+  <li>
+    <p><strong>VoiceOver on Safari</strong>: You need to enter a search term before pressing submit, You need to enter a search term before pressing submit</p>
+  </li>
+  <li>
+    <p><strong>JAWS 17 on IE11</strong>: Search about a recipe, You need to enter a search term before pressing submit, edit invalid entry, You need to enter a search term before pressing submit</p>
+  </li>
+  <li>
+    <p><strong>NVDA 2016 on Firefox Win</strong>: alert, You need to enter a search term before pressing submit</p>
+  </li>
+  <li>
+    <p><strong>iOS VoiceOver</strong>:</p>
+  </li>
+</ul>
+
+<h2 id="issues-we-have">Issue(s) we have</h2>
+
+<h3 id="reading-the-error-message-twice">Reading the error message twice</h3>
+
+<p>JAWS and Safari read the error message twice, which is not what we want. Mainly the issue was because we are using <code class="highlighter-rouge">aria-describedby</code> to let screen readers get the error, in addition to adding the error inside the <code class="highlighter-rouge">&lt;label&gt;</code> element. This will result in reading the error message twice!</p>
+
+<h3 id="testing-with-voiceover-on-safari">Testing with VoiceOver on Safari</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rE5a_YRKmi8" frameborder="0" allowfullscreen=""></iframe>
+
+<p><strong>HTML</strong> after removing <code class="highlighter-rouge">aria-describedby</code>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"search-label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search about a recipe
+      <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"error"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"search-input"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="testing-with-voiceover-on-safari-after-removing-aria-describedby">Testing with VoiceOver on Safari after removing <code class="highlighter-rouge">aria-describedby</code></h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M4CF1-4zTrc" frameborder="0" allowfullscreen=""></iframe>
+
+<p>So we no longer need <code class="highlighter-rouge">aria-describedby</code>, we have an <code class="highlighter-rouge">alert</code> that will do the job.</p>
+
+<h2 id="final-demo">Final Demo</h2>
+
+<p data-height="344" data-theme-id="23655" data-slug-hash="6883a3dd3c483629cf18a2f8279f0a89" data-default-tab="result" data-user="shadeed" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/shadeed/pen/6883a3dd3c483629cf18a2f8279f0a89/">a11ymatters - Search with role</a> by Ahmad Shadeed (<a href="http://codepen.io/shadeed">@shadeed</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+
+            </div>
+
+            <section class="c-share">
+    <h3>Share the article:</h3>
+    <p>
+        Did you like the article? <a href="https://twitter.com/intent/tweet?text=Accessibility Matters - Search Form&url=http://www.a11ymatters.com/pattern/accessible-search/&via=weba11ymatters&related=shadeed9"
+            rel="nofollow" target="_blank" title="Share on Twitter">Share it on Twitter</a>
+    </p>
+</section>
+
+            <div class="hire-me">
+                <h3>Did you like the article? You can hire me.</h3>
+                <p>I'm a UX, UI Designer and Front End Developer. I focus on building accessible and easy to use websites and apps. Get in touch by email:
+                    <a href="mailto:contact@ishadeed.com">contact@ishadeed.com</a></p>
+            </div>
+
+            <footer class="c-article__footer">
+                <h3 class="c-article__footer__title">About the author:</h3>
+                <div class="c-bio">
+    <img class="c-bio__avatar" src="../../assets/images/shadeed.jpg" alt="">
+    <h4 class="c-bio__title">Ahmad Shadeed</h4>
+    <p class="c-bio__meta">UI, UX Designer & Front-End Developer. Writing about web accessibility on <a href="https://twitter.com/shadeed9">@weba11ymatters</a> and sharing articles on my <a href="https://www.ishadeed.com">blog</a>. Interested in Modular Design, CSS Architecture
+        and Layout Design.</p>
+</div>
+            </footer>
+        </div>
+	</article>
+
+    <div class="o-wrapper o-wrapper--small">
+        <section class="c-block c-block--more">
+            <h3 class="">More articles</h3>
+            <div class="c-block--more__content">
+                
+                    <a class="c-block--more__link next" href="/pattern/skip-link/"> Skip Navigation Link </a>
+                
+                
+                
+                    <a class="c-block--more__link prev" href="/pattern/page-title/"> Page Title</a>
+                
+            </div>
+        </section>
+
+        
+        <h3>Share your thoughts and ideas:</h3>
+        
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//a11ymatters.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        
+    </div>
+</main>
+
+
+          <footer class="c-footer" role="contentinfo">
+	<div class="o-wrapper">
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Sitemap</h4>
+				<ul class="c-list">
+					 
+					<li class="c-list__item">
+						<a href="/">Home</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/articles">Articles</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/patterns">Patterns</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/faq">FAQ</a>
+					</li>
+					 
+				</ul>
+		</div>
+
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Stay connected</h4>
+				<ul class="c-list">
+					<li class="c-list__item">
+						 <a href="/feed.xml">RSS Feed</a>
+					</li>
+					<li class="c-list__item"><a href="https://www.facebook.com/weba11ymatters">a11ymatters on <strong>Facebook</strong></a></li>
+					<li class="c-list__item"><a href="https://twitter.com/weba11ymatters">a11ymatters on <strong>Twitter</strong></a></li>
+				</ul>
+		</div>
+
+		<div class="c-footer__item c-footer__item--email">
+			<h3 class="c-footer__item__title">Contact us</h4>
+				<a href="mailto:contact@ishadeed.com">contact[at]ishadeed[dot]com</a>
+		</div>
+
+		<div class="c-footer__item c-footer__item--full c-footer__item--legal c-footer__item--divided">
+			<div>
+				<p>
+					Do you have suggestions? <a href="https://github.com/shadeed/a11ymatters/issues" target="_blank">Contribute</a> on Github.
+				</p>
+				<p>
+					A project by<a href="https://www.ishadeed.com" target="_blank"> Ahmad Shadeed</a>.
+
+				</p>
+			</div>
+
+			<div>
+				<p><strong>Disclaimer:</strong> I'm not an accessibility expert. Currently, I read a lot about it and try to learn as much as I can. As a result,
+					you might find some wrong or unclear things in the articles. Please don't hesitate to ping me via Twitter on <a href="https://twitter.com/shadeed9">@shadeed9</a> or <a href="https://twitter.com/weba11ymatters">@weba11ymatters</a>.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+          <script src="/assets/js/modernizr.js"></script>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-85352868-1', 'auto');
+            ga('send', 'pageview');
+
+          </script>
+    </body>
+</html>

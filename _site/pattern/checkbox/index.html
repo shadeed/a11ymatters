@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Accessibility Matters - Checkbox</title>
+        <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" />
+        <meta name="viewport" content="width=device-width">
+        <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Latest 10 blog posts (atom)" />
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement( "picture" );
+        </script>
+        <script src="/assets/js/picturefill.min.js" async></script>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+        <meta property="og:title" content="Accessibility Matters - Checkbox"/>
+
+        
+        <meta property="og:url" content="https://www.a11ymatters.com/pattern/checkbox/">
+        
+
+        <meta property="og:description" content="Documenting everything through the journey of learning web accessibility." />
+        <meta property="og:image" content="https://www.a11ymatters.com/assets/images/thumb.jpg"/>
+        <meta property="og:site_name" content="Ahmad Shadeed, UX,UI Designer and Front-End developer."/>
+        <meta property="og:type" content="blog"/>
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@weba11ymatters" />
+        <meta name="twitter:title" content="Accessibility Matters - Checkbox" />
+
+        
+        <meta name="twitter:url" content="https://www.a11ymatters.com/pattern/checkbox/" />
+        
+
+        <meta name="twitter:description" content="Documenting everything through the journey of learning web accessibility." />
+        <meta name="twitter:image" content="https://www.a11ymatters.com/assets/images/thumb.jpg" />
+
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1141521,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+    <body>
+          <a class="c-skip" href="#content">Skip to main content</a>
+          <header class="c-header" role="banner">
+  <div class="o-wrapper c-header__wrapper">
+    <div class="c-page-title">
+      <a class="c-page-title__link" href="/">
+        <h1 aria-label="Accessibility Matters">a11ymatters</h1>
+        <p aria-hidden="true"><em>Let's care more about web accessibility</em></p>
+      </a>
+    </div>
+    <nav class="c-nav" role="navigation">
+      <ul>
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/">Home</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/articles">Articles</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/patterns">Patterns</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/faq">FAQ</a>
+                </li>
+                
+             
+        
+      </ul>
+   </nav>
+  </div>
+</header>
+
+          <main role="main" id="content" class="in-article">
+	<article class="c-article c-article--pattern">
+        <header class="c-article__header c-article__header--pattern">
+            <div class="o-wrapper o-wrapper--small">
+                <span>Exploring how to build an:</span>
+                <h2 class="c-article__title">Accessible Checkbox</h2>
+                <p>Published on: <time class="c-article__date">Tuesday, September 17, 2019</time></p>
+            </div>
+            <ul class="c-breadcrumbs">
+                <div class="o-wrapper o-wrapper--small">
+                    <li class="c-breadcrumbs__item"><a href="/">Home</a></li>
+                    <li class="c-breadcrumbs__item"><a href="/patterns">Patterns</a></li>
+                    <li class="c-breadcrumbs__item"><strong>Checkbox</strong></li>
+                </div>
+            </ul>
+        </header>
+
+        <div class="o-wrapper o-wrapper--small">
+                <style>
+                        #carbonads {
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+                        Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                        }
+            
+                        #carbonads {
+                        display: flex;
+                        max-width: 330px;
+                        margin: 0 auto 1rem;
+                        background-color: hsl(0, 0%, 98%);
+                        box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, .1);
+                        }
+            
+                        #carbonads a {
+                        color: inherit;
+                        text-decoration: none;
+                        }
+            
+                        #carbonads a:hover {
+                        color: inherit;
+                        }
+            
+                        #carbonads span {
+                        position: relative;
+                        display: block;
+                        overflow: hidden;
+                        }
+            
+                        #carbonads .carbon-wrap {
+                        display: flex;
+                        }
+            
+                        .carbon-img {
+                        display: block;
+                        margin: 0;
+                        line-height: 1;
+                        }
+            
+                        .carbon-img img {
+                        display: block;
+                        margin: 0 !important;
+                        border: 0;
+                        border-radius: 0;
+                        }
+            
+                        .carbon-text {
+                        font-size: 13px;
+                        padding: 10px;
+                        line-height: 1.5;
+                        text-align: left;
+                        }
+            
+                        .carbon-poweredby {
+                        display: block;
+                        padding: 8px 10px;
+                        background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+                        text-align: center;
+                        text-transform: uppercase;
+                        letter-spacing: .5px;
+                        font-weight: 600;
+                        font-size: 9px;
+                        line-height: 1;
+                        }
+                    </style>
+                    <div>
+                        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7J&placement=wwwa11ymatterscom" id="_carbonads_js"></script>
+                    </div>
+            <div class="c-notice u-push-bottom-large">
+                <p>
+                    <strong>Last updated: </strong> Tuesday, September 17, 2019.
+                </p>
+                <p>
+                    If you have a suggestion or an issue please <a href="https://github.com/shadeed/a11ymatters/issues">submit</a> it on a11ymatters on Github.
+                </p>
+            </div>
+            
+            <section class="c-block">
+                <h3 class="c-block__title">Article Outline</h3>
+                <div class="c-block__content">
+                    <ul class="c-list c-list--bullet c-list--bigger c-list--outline">
+                        
+                            <li class="c-list__item">
+                                <a href="#default-accessible-checkbox">Default Accessible Checkbox</a>
+                                
+                                    <ul>
+                                      
+                                        <li>
+                                            <a href="#associating-the-label-with-the-input">Associating the label with the input</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#preventing-text-selection">Preventing Text Selection</a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="c-list__item">
+                                <a href="#multiple-checkboxes">Multiple Checkboxes</a>
+                                
+                                    <ul>
+                                      
+                                        <li>
+                                            <a href="#fieldset-for-the-win">Fieldset for the win</a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="c-list__item">
+                                <a href="#custom-checkbox-design">Custom Checkbox Design</a>
+                                
+                                    <ul>
+                                      
+                                        <li>
+                                            <a href="#using-css-and-background-images">Using CSS and Background Images</a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="c-list__item">
+                                <a href="#things-to-consider-when-customizing-a-checkbox">Things to Consider When Customizing a Checkbox</a>
+                                
+                                    <ul>
+                                      
+                                        <li>
+                                            <a href="#using-pointer-events">Using Pointer Events</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#focus-styles">Focus Styles</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#reducing-animations">Reducing Animations</a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                        
+                    </ul>
+
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </section>
+            <section class="c-block">
+                <h3 class="c-block__title">Summary</h3>
+                <div class="c-block__content">
+                    <p>How to properly mark up a checkbox and customizing its design taking in consideration that the result is accessible and easy to use.</p>
+                </div>
+            </section>
+
+            <section class="c-block">
+                <h3 class="c-block__title">As a user</h3>
+                <div class="c-block__content">
+                    <ul class="c-list c-list--bullet c-list--bigger">
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I should be able to navigate by keyboard.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I expect that there will be no animation in case I disabled animations from system preferences.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I should see a clear focus style.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>In multiple checkboxes, I should hear the question or title related to them.</li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <section class="c-block c-ingredients">
+                <h3 class="c-block__title">Ingredients</h3>
+                <div class="c-block__content">
+                    <ul>
+                        
+                            <li class="c-ingredients__item">label</li>
+                        
+                            <li class="c-ingredients__item">checkbox input</li>
+                        
+                    </ul>
+                </div>
+            </section>
+            <!-- End of Ingredients -->
+
+            <div class="s-article s-article--pattern">
+                <p>As per MDN, a checkbox:</p>
+<blockquote>
+  <p><code class="highlighter-rouge">&lt;input&gt;</code> of type checkbox are rendered by default as square boxes that are checked (ticked) when activated. They allow you to select or deselect single values in a form.</p>
+</blockquote>
+
+<h2 id="default-accessible-checkbox">Default Accessible Checkbox</h2>
+<p>Let’s mark up a checkbox in HTML.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;label&gt;</span>Hello, I'm a checkbox<span class="nt">&lt;/label&gt;</span></code></pre></figure>
+
+<p>Here is how the above code works:</p>
+<figure>
+    <img src="../../assets/images/patterns/checkbox/checkbox-1.gif" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>The checkbox can be activated only by clicking on the box only. If the user clicked on the text, it won’t be activated. This is not good.</p>
+
+<h3 id="associating-the-label-with-the-input">Associating the label with the input</h3>
+<p>To achieve that, an ID should be added to the checkbox <code class="highlighter-rouge">&lt;input&gt;</code>. Then, this ID will be used as a <code class="highlighter-rouge">for</code> attribute for the <code class="highlighter-rouge">&lt;label&gt;</code> element.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"c1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"c1"</span><span class="nt">&gt;</span>Hello, I'm a checkbox<span class="nt">&lt;/label&gt;</span></code></pre></figure>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/checkbox-2.gif" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>Now, when the user clicks on the input’s label text, it will be activated. This is much better!</p>
+
+<h3 id="preventing-text-selection">Preventing Text Selection</h3>
+<p>Sometimes, when the checkbox is activated/deactivated, the input’s label text got selected like below:</p>
+<figure>
+    <img src="../../assets/images/patterns/checkbox/text-selected.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>This can be solved by using <code class="highlighter-rouge">user-select</code> in CSS.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">label</span> <span class="p">{</span>
+    <span class="py">user-select</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>To recap, I laid out the foundation to an accessible checkbox. Here is the final HTML:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"c1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"c1"</span><span class="nt">&gt;</span>Hello, I'm a checkbox<span class="nt">&lt;/label&gt;</span></code></pre></figure>
+
+<p>It’s also possible to wrap the input in the label. In that case, <code class="highlighter-rouge">id</code> and <code class="highlighter-rouge">for</code> attributes won’t be needed. The association will work out of the box.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    Hello, I'm a checkbox
+<span class="nt">&lt;/label&gt;</span></code></pre></figure>
+
+<h2 id="multiple-checkboxes">Multiple Checkboxes</h2>
+<p>Or a group of checkboxes. This can be useful for a question that might have multiple answers or selections from the user.</p>
+
+<p>Let’s see how to mark up a question asking about your favorite type of meals.
+From the first glance, you might think about adding a heading and then to group the checkboxes in a wrapper or something.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>What's your favorite meal?<span class="nt">&lt;/h2&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-group__item"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"m1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"m1"</span><span class="nt">&gt;</span>Meal 1<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-group__item"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"m2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"m2"</span><span class="nt">&gt;</span>Meal 2<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-group__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"m3"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"m3"</span><span class="nt">&gt;</span>Meal 3<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>The above might look good for a sighted user. However, for a visually impaired user, the above isn’t accessible. See the below screenshot for how macOS VoiceOver reads that.</p>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/voiceover-1.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>The question “What’s your favorite meal?” hasn’t been read to the user. As a result, when going through the checkboxes, the user won’t know what the context they are in.</p>
+
+<h3 id="fieldset-for-the-win">Fieldset for the win</h3>
+<p>By default, there is an HTML element that is suitable for that use case. It can be marked up as below:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"c-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend&gt;</span>What's your favorite meal?<span class="nt">&lt;/legend&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-group__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"m1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"m1"</span><span class="nt">&gt;</span>Meal 1<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-group__item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"m2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"m2"</span><span class="nt">&gt;</span>Meal 2<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-group__item"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"m3"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"m3"</span><span class="nt">&gt;</span>Meal 3<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
+
+<p>Simple, isn’t it? I just swapped the group <code class="highlighter-rouge">&lt;div&gt;</code> with a <code class="highlighter-rouge">&lt;fieldset&gt;</code>, and replaced the heading with a <code class="highlighter-rouge">&lt;legend&gt;</code> element.</p>
+
+<p>Now, let’s see how VoiceOver will read that!</p>
+<figure>
+    <img src="../../assets/images/patterns/checkbox/voiceover-2.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>Much better. Now the user can know the context. This is a group and there is a question related to it with multiple answers.</p>
+
+<h2 id="custom-checkbox-design">Custom Checkbox Design</h2>
+
+<h3 id="using-css-and-background-images">Using CSS and Background Images</h3>
+<p>Most of the time, a custom design for the checkbox is required. Let’s explore how to achieve that.</p>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/custom-1.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>Since the default checkbox design is not customizable, I will hide it visually and add a pseudo element. By visually, I mean to hide it from the UI and keep it in the DOM for screen reader and keyboard users.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.sr-only</span> <span class="p">{</span>
+    <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+    <span class="nl">clip</span><span class="p">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">);</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+    <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now, the input checkbox is hidden and it looks like the below figure.</p>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/custom-2.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>I added some basic CSS to style a fake checkbox with <code class="highlighter-rouge">before</code> pseudo element.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">id=</span><span class="s">"c"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"c-checkbox__label"</span> <span class="na">for=</span><span class="s">"c"</span><span class="nt">&gt;</span>Custom Checkbox<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.c-checkbox__label</span> <span class="p">{</span>
+    <span class="err">&amp;:before</span> <span class="err">{</span>
+        <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+        <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+        <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="m">#c5c5c5</span><span class="p">;</span>
+        <span class="nl">margin-right</span><span class="p">:</span> <span class="m">8px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span></code></pre></figure>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/custom-3.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>Next, I will add the <code class="highlighter-rouge">checked</code> style for the checkbox. Since the input is there, it will be used to select the label <code class="highlighter-rouge">before</code> pseudo element.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.c-checkbox</span> <span class="nt">input</span><span class="nd">:checked</span> <span class="o">+</span> <span class="nc">.c-checkbox__label</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="m">#3863d9</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="sx">url('../img/checkmark.svg')</span> <span class="nb">center</span><span class="p">/</span><span class="m">12px</span> <span class="nb">no-repeat</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><strong>Result</strong></p>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/custom-4.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<h3 id="using-inline-svg">Using Inline SVG</h3>
+<p>It’s also possible to use an inline SVG element for the checkmark. That way, you can have a bigger control which can open a lot of possibilities.</p>
+
+<p>In the below example, I placed an inline SVG and animated the checkmark path in CSS with <code class="highlighter-rouge">stroke-dasharray</code> and <code class="highlighter-rouge">stroke-dashoffset</code> properties.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-checkbox c-checkbox--svg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">id=</span><span class="s">"cs"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"c-checkbox__label c-checkbox__label--svg"</span> <span class="na">for=</span><span class="s">"cs"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 100 100"</span><span class="nt">&gt;</span>
+  	    <span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"path"</span> <span class="na">fill=</span><span class="s">"none"</span> <span class="na">stroke=</span><span class="s">"#000"</span> <span class="na">stroke-width=</span><span class="s">"13"</span> <span class="na">d=</span><span class="s">"M12.1 52.1l24.4 24.4 53-53"</span><span class="nt">/&gt;</span>
+	<span class="nt">&lt;/svg&gt;</span>
+        Custom Checkbox
+    <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.c-checkbox--svg</span> <span class="nt">input</span><span class="nd">:checked</span> <span class="o">+</span> <span class="nc">.c-checkbox__label--svg</span> <span class="p">{</span>
+    <span class="err">&amp;:before</span> <span class="err">{</span>
+        <span class="nl">background</span><span class="p">:</span> <span class="m">#3863d9</span><span class="p">;</span>
+        <span class="nl">border-color</span><span class="p">:</span> <span class="m">#3863d9</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nc">.path</span> <span class="p">{</span>
+        <span class="py">stroke</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+        <span class="py">stroke-dashoffset</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+
+<span class="nc">.c-checkbox__label--svg</span> <span class="p">{</span>
+    <span class="nl">padding-left</span><span class="p">:</span> <span class="m">32px</span><span class="p">;</span>
+
+    <span class="err">&amp;:before</span> <span class="err">{</span>
+        <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+        <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+        <span class="nl">top</span><span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+        <span class="nl">transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">0.35s</span> <span class="n">ease-out</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">svg</span> <span class="p">{</span>
+        <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+        <span class="nl">left</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+        <span class="nl">top</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nc">.path</span> <span class="p">{</span>
+        <span class="py">stroke-dashoffset</span><span class="p">:</span> <span class="m">111.46px</span><span class="p">;</span>
+        <span class="py">stroke-dasharray</span><span class="p">:</span> <span class="m">111.46px</span><span class="p">;</span>
+        <span class="py">stroke</span><span class="p">:</span> <span class="m">#3863d9</span><span class="p">;</span>
+        <span class="nl">transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">0.35s</span> <span class="n">ease-out</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span></code></pre></figure>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/checkbox-3.gif" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<h2 id="things-to-consider-when-customizing-a-checkbox">Things to Consider When Customizing a Checkbox</h2>
+
+<h3 id="using-pointer-events">Using Pointer Events</h3>
+<p>In the custom checkbox I built, the checkbox won’t be active when clicking over the SVG tick element. To avoid that, it’s better to add disable pointer events on it.</p>
+
+<p>In the below GIF, I’m trying to click on the square but it’s not working. It’s like being checked for a few milliseconds and then it’s returned to its initial state. That’s because I’m clicking on the SVG element.</p>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/checkbox-4.gif" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.c-checkbox__label--svg</span> <span class="nt">svg</span> <span class="p">{</span>
+    <span class="c">/*Other styles*/</span>
+    <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="focus-styles">Focus Styles</h3>
+<p>It’s important to care about keyboard users. As a result, the focus style should be added to provide a better experience for those users.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.c-checkbox</span> <span class="nt">input</span><span class="nd">:focus</span> <span class="o">+</span> <span class="nc">.c-checkbox__label</span> <span class="p">{</span>
+    <span class="nl">outline</span><span class="p">:</span> <span class="nb">dashed</span> <span class="m">2px</span> <span class="no">lightgrey</span><span class="p">;</span>
+    <span class="nl">outline-offset</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The focus will now work with the keyboard. However, it will still there while using a mouse. The best solution I found to this issue is using CSS <code class="highlighter-rouge">:focus-visible</code> which is supported only in Firefox at the time of writing this article.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.c-checkbox</span> <span class="nt">input</span><span class="nd">:focus:not</span><span class="o">(</span><span class="nd">:focus-visible</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nl">outline</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<figure>
+    <img src="../../assets/images/patterns/checkbox/checkbox-5.gif" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>If you’ve noticed, the outline on the first custom checkbox is not a 100% rectangle. See the below figure:</p>
+<figure>
+    <img src="../../assets/images/patterns/checkbox/outline-issue.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<p>That’s due to that the label itself is an inline element. When adding <code class="highlighter-rouge">display: inline-block</code> or <code class="highlighter-rouge">display: block</code> to this, the issue is solved and the outline is clear.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.c-checkbox__label</span> <span class="p">{</span>
+    <span class="c">/*other styles*/</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="reducing-animations">Reducing Animations</h3>
+<p>Some users don’t feel comfortable or have issues dealing with animated elements. There is an option in every operating system that let the users disable animations for a better experience.</p>
+
+<p>Here is an example of the accessibility settings in macOS.</p>
+<figure>
+    <img src="../../assets/images/patterns/checkbox/reduce-macos.png" alt="" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+<p>For our case, it’s recommended to account for that in CSS and add the following:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="p">(</span><span class="n">prefers-reduced-motion</span><span class="p">:</span> <span class="n">reduce</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nc">.c-checkbox__label--svg</span> <span class="nc">.path</span> <span class="p">{</span>
+        <span class="nl">transition</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="codepen-demo">Codepen Demo</h2>
+<p class="codepen" data-height="337" data-theme-id="23655" data-default-tab="result" data-user="shadeed" data-slug-hash="dybqdGP" style="height: 337px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Accessible Checkbox Demos">
+  <span>See the Pen <a href="https://codepen.io/shadeed/pen/dybqdGP/">
+  Accessible Checkbox Demos</a> by Ahmad Shadeed (<a href="https://codepen.io/shadeed">@shadeed</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+            </div>
+
+            <section class="c-share">
+    <h3>Share the article:</h3>
+    <p>
+        Did you like the article? <a href="https://twitter.com/intent/tweet?text=Accessibility Matters - Checkbox&url=http://www.a11ymatters.com/pattern/checkbox/&via=weba11ymatters&related=shadeed9"
+            rel="nofollow" target="_blank" title="Share on Twitter">Share it on Twitter</a>
+    </p>
+</section>
+
+            <div class="hire-me">
+                <h3>Did you like the article? You can hire me.</h3>
+                <p>I'm a UX, UI Designer and Front End Developer. I focus on building accessible and easy to use websites and apps. Get in touch by email:
+                    <a href="mailto:contact@ishadeed.com">contact@ishadeed.com</a></p>
+            </div>
+
+            <footer class="c-article__footer">
+                <h3 class="c-article__footer__title">About the author:</h3>
+                <div class="c-bio">
+    <img class="c-bio__avatar" src="../../assets/images/shadeed.jpg" alt="">
+    <h4 class="c-bio__title">Ahmad Shadeed</h4>
+    <p class="c-bio__meta">UI, UX Designer & Front-End Developer. Writing about web accessibility on <a href="https://twitter.com/shadeed9">@weba11ymatters</a> and sharing articles on my <a href="https://www.ishadeed.com">blog</a>. Interested in Modular Design, CSS Architecture
+        and Layout Design.</p>
+</div>
+            </footer>
+        </div>
+	</article>
+
+    <div class="o-wrapper o-wrapper--small">
+        <section class="c-block c-block--more">
+            <h3 class="">More articles</h3>
+            <div class="c-block--more__content">
+                
+                
+                
+                    <a class="c-block--more__link prev" href="/article/aljazeera-a11y-audit/"> Accessibility Audit for Aljazeera English Website</a>
+                
+            </div>
+        </section>
+
+        
+        <h3>Share your thoughts and ideas:</h3>
+        
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//a11ymatters.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        
+    </div>
+</main>
+
+
+          <footer class="c-footer" role="contentinfo">
+	<div class="o-wrapper">
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Sitemap</h4>
+				<ul class="c-list">
+					 
+					<li class="c-list__item">
+						<a href="/">Home</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/articles">Articles</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/patterns">Patterns</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/faq">FAQ</a>
+					</li>
+					 
+				</ul>
+		</div>
+
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Stay connected</h4>
+				<ul class="c-list">
+					<li class="c-list__item">
+						 <a href="/feed.xml">RSS Feed</a>
+					</li>
+					<li class="c-list__item"><a href="https://www.facebook.com/weba11ymatters">a11ymatters on <strong>Facebook</strong></a></li>
+					<li class="c-list__item"><a href="https://twitter.com/weba11ymatters">a11ymatters on <strong>Twitter</strong></a></li>
+				</ul>
+		</div>
+
+		<div class="c-footer__item c-footer__item--email">
+			<h3 class="c-footer__item__title">Contact us</h4>
+				<a href="mailto:contact@ishadeed.com">contact[at]ishadeed[dot]com</a>
+		</div>
+
+		<div class="c-footer__item c-footer__item--full c-footer__item--legal c-footer__item--divided">
+			<div>
+				<p>
+					Do you have suggestions? <a href="https://github.com/shadeed/a11ymatters/issues" target="_blank">Contribute</a> on Github.
+				</p>
+				<p>
+					A project by<a href="https://www.ishadeed.com" target="_blank"> Ahmad Shadeed</a>.
+
+				</p>
+			</div>
+
+			<div>
+				<p><strong>Disclaimer:</strong> I'm not an accessibility expert. Currently, I read a lot about it and try to learn as much as I can. As a result,
+					you might find some wrong or unclear things in the articles. Please don't hesitate to ping me via Twitter on <a href="https://twitter.com/shadeed9">@shadeed9</a> or <a href="https://twitter.com/weba11ymatters">@weba11ymatters</a>.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+          <script src="/assets/js/modernizr.js"></script>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-85352868-1', 'auto');
+            ga('send', 'pageview');
+
+          </script>
+    </body>
+</html>

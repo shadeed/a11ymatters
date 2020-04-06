@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Accessibility Matters - Pagination</title>
+        <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" />
+        <meta name="viewport" content="width=device-width">
+        <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Latest 10 blog posts (atom)" />
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement( "picture" );
+        </script>
+        <script src="/assets/js/picturefill.min.js" async></script>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+        <meta property="og:title" content="Accessibility Matters - Pagination"/>
+
+        
+        <meta property="og:url" content="https://www.a11ymatters.com/pattern/pagination/">
+        
+
+        <meta property="og:description" content="Documenting everything through the journey of learning web accessibility." />
+        <meta property="og:image" content="https://www.a11ymatters.com/assets/images/thumb.jpg"/>
+        <meta property="og:site_name" content="Ahmad Shadeed, UX,UI Designer and Front-End developer."/>
+        <meta property="og:type" content="blog"/>
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@weba11ymatters" />
+        <meta name="twitter:title" content="Accessibility Matters - Pagination" />
+
+        
+        <meta name="twitter:url" content="https://www.a11ymatters.com/pattern/pagination/" />
+        
+
+        <meta name="twitter:description" content="Documenting everything through the journey of learning web accessibility." />
+        <meta name="twitter:image" content="https://www.a11ymatters.com/assets/images/thumb.jpg" />
+
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1141521,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+    <body>
+          <a class="c-skip" href="#content">Skip to main content</a>
+          <header class="c-header" role="banner">
+  <div class="o-wrapper c-header__wrapper">
+    <div class="c-page-title">
+      <a class="c-page-title__link" href="/">
+        <h1 aria-label="Accessibility Matters">a11ymatters</h1>
+        <p aria-hidden="true"><em>Let's care more about web accessibility</em></p>
+      </a>
+    </div>
+    <nav class="c-nav" role="navigation">
+      <ul>
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/">Home</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/articles">Articles</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/patterns">Patterns</a>
+                </li>
+                
+             
+        
+             
+                
+                <li class="c-nav__item">
+                  <a href="/faq">FAQ</a>
+                </li>
+                
+             
+        
+      </ul>
+   </nav>
+  </div>
+</header>
+
+          <main role="main" id="content" class="in-article">
+	<article class="c-article c-article--pattern">
+        <header class="c-article__header c-article__header--pattern">
+            <div class="o-wrapper o-wrapper--small">
+                <span>Exploring how to build an:</span>
+                <h2 class="c-article__title">Accessible Pagination</h2>
+                <p>Published on: <time class="c-article__date">Thursday, October 20, 2016</time></p>
+            </div>
+            <ul class="c-breadcrumbs">
+                <div class="o-wrapper o-wrapper--small">
+                    <li class="c-breadcrumbs__item"><a href="/">Home</a></li>
+                    <li class="c-breadcrumbs__item"><a href="/patterns">Patterns</a></li>
+                    <li class="c-breadcrumbs__item"><strong>Pagination</strong></li>
+                </div>
+            </ul>
+        </header>
+
+        <div class="o-wrapper o-wrapper--small">
+                <style>
+                        #carbonads {
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+                        Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                        }
+            
+                        #carbonads {
+                        display: flex;
+                        max-width: 330px;
+                        margin: 0 auto 1rem;
+                        background-color: hsl(0, 0%, 98%);
+                        box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, .1);
+                        }
+            
+                        #carbonads a {
+                        color: inherit;
+                        text-decoration: none;
+                        }
+            
+                        #carbonads a:hover {
+                        color: inherit;
+                        }
+            
+                        #carbonads span {
+                        position: relative;
+                        display: block;
+                        overflow: hidden;
+                        }
+            
+                        #carbonads .carbon-wrap {
+                        display: flex;
+                        }
+            
+                        .carbon-img {
+                        display: block;
+                        margin: 0;
+                        line-height: 1;
+                        }
+            
+                        .carbon-img img {
+                        display: block;
+                        margin: 0 !important;
+                        border: 0;
+                        border-radius: 0;
+                        }
+            
+                        .carbon-text {
+                        font-size: 13px;
+                        padding: 10px;
+                        line-height: 1.5;
+                        text-align: left;
+                        }
+            
+                        .carbon-poweredby {
+                        display: block;
+                        padding: 8px 10px;
+                        background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+                        text-align: center;
+                        text-transform: uppercase;
+                        letter-spacing: .5px;
+                        font-weight: 600;
+                        font-size: 9px;
+                        line-height: 1;
+                        }
+                    </style>
+                    <div>
+                        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7ITK7J&placement=wwwa11ymatterscom" id="_carbonads_js"></script>
+                    </div>
+            <div class="c-notice u-push-bottom-large">
+                <p>
+                    <strong>Last updated: </strong> Monday, October 24, 2016.
+                </p>
+                <p>
+                    If you have a suggestion or an issue please <a href="https://github.com/shadeed/a11ymatters/issues">submit</a> it on a11ymatters on Github.
+                </p>
+            </div>
+            
+            <section class="c-block">
+                <h3 class="c-block__title">Article Outline</h3>
+                <div class="c-block__content">
+                    <ul class="c-list c-list--bullet c-list--bigger c-list--outline">
+                        
+                            <li class="c-list__item">
+                                <a href="#things-to-take-in-consideration">Things to take in consideration</a>
+                                
+                                    <ul>
+                                      
+                                        <li>
+                                            <a href="#wrap-the-pagination-links-in-a-nav-element">Wrap the pagination links in a nav element</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#labeling-the-navigation-links">Labeling the navigation links</a>
+                                        </li>
+                                      
+                                        <li>
+                                            <a href="#indicate-which-element-is-currently-active">Indicate which element is currently active</a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="c-list__item">
+                                <a href="#using-javascript-to-dynamically-add-the-aria-label">Using JavaScript to dynamically add the aria-label</a>
+                                
+                            </li>
+                        
+                            <li class="c-list__item">
+                                <a href="#final-demo">Final Demo</a>
+                                
+                            </li>
+                        
+                    </ul>
+
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </section>
+            <section class="c-block">
+                <h3 class="c-block__title">Summary</h3>
+                <div class="c-block__content">
+                    <p>When there is a lot of content to display, using pagination will help us to add navigation links to reveal more content on the page.</p>
+                </div>
+            </section>
+
+            <section class="c-block">
+                <h3 class="c-block__title">As a user</h3>
+                <div class="c-block__content">
+                    <ul class="c-list c-list--bullet c-list--bigger">
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I should be able to navigate by keyboard.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I should be able to know that there is a pagination navigation when scanning the page with a screen reader.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>Each navigation item should be read as "Goto Page 1".</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I need to know which element is currently active.</li>
+                        
+                            <li class="c-list__item"><span class="visually-hidden">As a user, </span>I need to navigate with Next and Previous links.</li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <section class="c-block c-ingredients">
+                <h3 class="c-block__title">Ingredients</h3>
+                <div class="c-block__content">
+                    <ul>
+                        
+                            <li class="c-ingredients__item">aria-label</li>
+                        
+                            <li class="c-ingredients__item">aria-current</li>
+                        
+                            <li class="c-ingredients__item">role=navigation</li>
+                        
+                            <li class="c-ingredients__item">nav</li>
+                        
+                            <li class="c-ingredients__item">links</li>
+                        
+                    </ul>
+                </div>
+            </section>
+            <!-- End of Ingredients -->
+
+            <div class="s-article s-article--pattern">
+                <h2 id="things-to-take-in-consideration">Things to take in consideration</h2>
+
+<h3 id="1--wrap-the-pagination-links-in-a-nav-element">1- Wrap the pagination links in a <code class="highlighter-rouge">&lt;nav&gt;</code> element</h3>
+
+<p>In order to let AT users recognize that there is a pagination, we should wrap the links in a <code class="highlighter-rouge">&lt;nav&gt;</code> element.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="c">&lt;!-- pagination links --&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<p>Also, we should add <code class="highlighter-rouge">role=navigation</code> and <code class="highlighter-rouge">aria-label</code> to make it clearer to AT users that this navigation <a href="/article/intro-html5-sectioning-elements/">landmark</a> is intended for the pagination.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Pagination Navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="c">&lt;!-- pagination links --&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h3 id="2--labeling-the-navigation-links">2- Labeling the navigation links</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Pagination Navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-3"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-4"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-5"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<p>For sighted users, it’s clear that the numbers will help him navigating different pages. But for an AT user, it’s completely different. We need a better way to make it clear for him.</p>
+
+<p>See the below video for a test with VoiceOver:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y858zZzihKI" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Imagine that your screen is not working for some reason, you need to navigate between different pages. When you hear <code class="highlighter-rouge">Link, 1</code> for a link with the number 1, do you think that you will get it? No! It’s not clear.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Pagination Navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-1"</span> <span class="na">aria-label=</span><span class="s">"Goto Page 1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-2"</span> <span class="na">aria-label=</span><span class="s">"Goto Page 2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-3"</span> <span class="na">aria-label=</span><span class="s">"Goto Page 3"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-4"</span> <span class="na">aria-label=</span><span class="s">"Goto Page 4"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/page-5"</span> <span class="na">aria-label=</span><span class="s">"Goto Page 5"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<p>By using <code class="highlighter-rouge">aria-label</code>, we can add a label to each link, so instead of hearing the screen reader saying <code class="highlighter-rouge">Link, 1</code> it will be <code class="highlighter-rouge">Link, Goto Page 1</code>. See the below video:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/muTF9AaxUXw" frameborder="0" allowfullscreen=""></iframe>
+
+<p>To make it more dynamic, we will use JavaScript to loop through all the links and add <code class="highlighter-rouge">aria-label</code> with the corresponding value of “Goto Page X”.</p>
+
+<h3 id="3--indicate-which-element-is-currently-active">3- Indicate which element is currently active</h3>
+
+<p>To indicate which element is active, we need to tweak the value of <code class="highlighter-rouge">aria-label</code> by something like <code class="highlighter-rouge">Page 3, Current page</code>. Also, we will use <code class="highlighter-rouge">aria-selected=true</code> for that.</p>
+
+<p><strong>Update</strong>: Using <code class="highlighter-rouge">aria-selected</code> is wrong in our case, because it should be used only with a <code class="highlighter-rouge">role</code> attribute. Instead, we will use <code class="highlighter-rouge">aria-current</code>. Thanks to David Storey and Stefan Judis for commenting about this. ❤️</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"Pagination Navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="c">&lt;!-- other pagination links --&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page-3"</span> <span class="na">aria-label=</span><span class="s">"Current Page, Page 3"</span> <span class="na">aria-current=</span><span class="s">"true"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="c">&lt;!-- other pagination links --&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h2 id="using-javascript-to-dynamically-add-the-aria-label">Using JavaScript to dynamically add the <code class="highlighter-rouge">aria-label</code></h2>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">pagItems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.pagination__item'</span><span class="p">);</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">pagItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="s2">"Page "</span> <span class="o">+</span> <span class="nx">counter</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">pagItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'aria-current'</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">string</span> <span class="o">=</span> <span class="s2">"Page "</span> <span class="o">+</span> <span class="nx">counter</span> <span class="o">+</span> <span class="s2">", Current Page"</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">pagItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'aria-label'</span><span class="p">,</span> <span class="nx">string</span><span class="p">);</span>
+<span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>Line 1</strong>: Select all the pagination links and add them to an array.</p>
+
+<p><strong>Line 2</strong>: Loop through each item.</p>
+
+<p><strong>Line 7</strong>: Check if the item has an attribute of <code class="highlighter-rouge">aria-current</code>, if yes then we need to tweak the <code class="highlighter-rouge">aria-label</code> value.</p>
+
+<p><strong>Line 11</strong>: Add the attribute <code class="highlighter-rouge">aria-label</code> with a custom name for each item.</p>
+
+<h2 id="final-demo">Final Demo</h2>
+
+<p data-height="300" data-theme-id="23655" data-slug-hash="e8711b7460b4d050a6f4f804080c0b05" data-default-tab="css,result" data-user="shadeed" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/shadeed/pen/e8711b7460b4d050a6f4f804080c0b05/">a11ymatters - Pagination</a> by Ahmad Shadeed (<a href="http://codepen.io/shadeed">@shadeed</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+
+            </div>
+
+            <section class="c-share">
+    <h3>Share the article:</h3>
+    <p>
+        Did you like the article? <a href="https://twitter.com/intent/tweet?text=Accessibility Matters - Pagination&url=http://www.a11ymatters.com/pattern/pagination/&via=weba11ymatters&related=shadeed9"
+            rel="nofollow" target="_blank" title="Share on Twitter">Share it on Twitter</a>
+    </p>
+</section>
+
+            <div class="hire-me">
+                <h3>Did you like the article? You can hire me.</h3>
+                <p>I'm a UX, UI Designer and Front End Developer. I focus on building accessible and easy to use websites and apps. Get in touch by email:
+                    <a href="mailto:contact@ishadeed.com">contact@ishadeed.com</a></p>
+            </div>
+
+            <footer class="c-article__footer">
+                <h3 class="c-article__footer__title">About the author:</h3>
+                <div class="c-bio">
+    <img class="c-bio__avatar" src="../../assets/images/shadeed.jpg" alt="">
+    <h4 class="c-bio__title">Ahmad Shadeed</h4>
+    <p class="c-bio__meta">UI, UX Designer & Front-End Developer. Writing about web accessibility on <a href="https://twitter.com/shadeed9">@weba11ymatters</a> and sharing articles on my <a href="https://www.ishadeed.com">blog</a>. Interested in Modular Design, CSS Architecture
+        and Layout Design.</p>
+</div>
+            </footer>
+        </div>
+	</article>
+
+    <div class="o-wrapper o-wrapper--small">
+        <section class="c-block c-block--more">
+            <h3 class="">More articles</h3>
+            <div class="c-block--more__content">
+                
+                    <a class="c-block--more__link next" href="/article/aljazeera-a11y-audit/"> Accessibility Audit for Aljazeera English Website </a>
+                
+                
+                
+                    <a class="c-block--more__link prev" href="/article/dont-use-divs-for-everything/"> Don't Use DIVs for Everything</a>
+                
+            </div>
+        </section>
+
+        
+        <h3>Share your thoughts and ideas:</h3>
+        
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//a11ymatters.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        
+    </div>
+</main>
+
+
+          <footer class="c-footer" role="contentinfo">
+	<div class="o-wrapper">
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Sitemap</h4>
+				<ul class="c-list">
+					 
+					<li class="c-list__item">
+						<a href="/">Home</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/articles">Articles</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/patterns">Patterns</a>
+					</li>
+					  
+					<li class="c-list__item">
+						<a href="/faq">FAQ</a>
+					</li>
+					 
+				</ul>
+		</div>
+
+		<div class="c-footer__item">
+			<h3 class="c-footer__item__title">Stay connected</h4>
+				<ul class="c-list">
+					<li class="c-list__item">
+						 <a href="/feed.xml">RSS Feed</a>
+					</li>
+					<li class="c-list__item"><a href="https://www.facebook.com/weba11ymatters">a11ymatters on <strong>Facebook</strong></a></li>
+					<li class="c-list__item"><a href="https://twitter.com/weba11ymatters">a11ymatters on <strong>Twitter</strong></a></li>
+				</ul>
+		</div>
+
+		<div class="c-footer__item c-footer__item--email">
+			<h3 class="c-footer__item__title">Contact us</h4>
+				<a href="mailto:contact@ishadeed.com">contact[at]ishadeed[dot]com</a>
+		</div>
+
+		<div class="c-footer__item c-footer__item--full c-footer__item--legal c-footer__item--divided">
+			<div>
+				<p>
+					Do you have suggestions? <a href="https://github.com/shadeed/a11ymatters/issues" target="_blank">Contribute</a> on Github.
+				</p>
+				<p>
+					A project by<a href="https://www.ishadeed.com" target="_blank"> Ahmad Shadeed</a>.
+
+				</p>
+			</div>
+
+			<div>
+				<p><strong>Disclaimer:</strong> I'm not an accessibility expert. Currently, I read a lot about it and try to learn as much as I can. As a result,
+					you might find some wrong or unclear things in the articles. Please don't hesitate to ping me via Twitter on <a href="https://twitter.com/shadeed9">@shadeed9</a> or <a href="https://twitter.com/weba11ymatters">@weba11ymatters</a>.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+          <script src="/assets/js/modernizr.js"></script>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-85352868-1', 'auto');
+            ga('send', 'pageview');
+
+          </script>
+    </body>
+</html>
