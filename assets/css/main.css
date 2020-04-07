@@ -325,6 +325,12 @@ blockquote {
     -ms-flex-align: center;
         align-items: center; } }
 
+.powered-by {
+  display: block;
+  margin-top: 1rem; }
+  .powered-by img {
+    width: 160px; }
+
 .c-footer {
   background: #fff;
   border-top: 1px solid #d8d8d8;
